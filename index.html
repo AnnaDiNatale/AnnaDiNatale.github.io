@@ -15,7 +15,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -28,14 +28,38 @@ body, html {
   min-height: 100%;
 }
 
-/* Second image (Portfolio) */
+/* Second image (About) */
 .bgimg-2 {
   background-image: url("/w3images/parallax2.jpg");
   min-height: 400px;
 }
 
-/* Third image (Contact) */
+/* Third image (CV) */
 .bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+/* Fourth image (Publications) */
+.bgimg-4 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+/* Fifth image (Talks) */
+.bgimg-5 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+/* Sixth image (Group) */
+.bgimg-6 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
+
+/* Seventh image (Contacts) */
+.bgimg-7 {
   background-image: url("/w3images/parallax3.jpg");
   min-height: 400px;
 }
@@ -64,6 +88,7 @@ body, html {
     <a href="#cv" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> CV</a>
     <a href="#publications" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PUBLICATIONS</a>
     <a href="#talks" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> TALKS AND EVENTS</a>
+    <a href="#group" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> MY RESEARCH GROUP</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
@@ -76,6 +101,7 @@ body, html {
     <a href="#cv" class="w3-bar-item w3-button" onclick="toggleFunction()">CV</a>
     <a href="#publications" class="w3-bar-item w3-button" onclick="toggleFunction()">PUBLICATIONS</a>
     <a href="#talks" class="w3-bar-item w3-button" onclick="toggleFunction()">TALKS AND EVENTS</a>
+    <a href="#group" class="w3-bar-item w3-button" onclick="toggleFunction()">MY RESEARCH GROUP</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
@@ -131,19 +157,20 @@ body, html {
   </div>
 </div>
 
-<!-- Second Parallax Image with Portfolio Text -->
+<!-- Second Parallax Image with About Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PUBLICATIONS</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">ABOUT</span>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="pubications">
-  <h3 class="w3-center">MY WORK</h3>
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT</h3>
   <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <!--
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
       <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
@@ -181,6 +208,7 @@ body, html {
     <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
   </div>
 </div>
+-->
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -191,35 +219,60 @@ body, html {
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+<!-- Third Parallax Image with CV Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">CV</span>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
+<!-- Container (CV Section) -->
 <div class="w3-content w3-container w3-padding-64" id="cv">
   <h3 class="w3-center">MY CV</h3>
   <p class="w3-center"><em>Here is my curriculum vitae lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
   
-  <!-- Fourth Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
+  
+  <!-- Fourth Parallax Image with Publications Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PUBLICATIONS</span>
+  </div>
+</div>
+
+<!-- Container (Publications Section) -->
+<div class="w3-content w3-container w3-padding-64" id="publications">
+  <h3 class="w3-center">PUBLICATIONS</h3>
+  <p class="w3-center"><em>Here is my curriculum vitae lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+  
+  
+  <!-- Fifth Parallax Image with Talks Text -->
+<div class="bgimg-5 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide">TALKS AND EVENTS</span>
   </div>
 </div>
 
-<!-- Container (Portfolio Section) -->
+<!-- Container (Talks Section) -->
 <div class="w3-content w3-container w3-padding-64" id="talks">
   <h3 class="w3-center">TALKS AND EVENTS</h3>
   <p class="w3-center"><em>My last talks and events.<br> Click on the images to make them bigger</em></p><br>
   August 2019, Text analysis with colexification clusters, <em>ESSLLI2019 Summer school, Riga, Latvia.
   18 July 2019, Subcritical Social Impact and Sentiment in Twitter. <em>IC2S2, Amsterdam, The Nederlands.
   
+<!-- Sixth Parallax Image with Group Text -->
+<div class="bgimg-6 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">MY GROUP</span>
+  </div>
+</div>
 
-<!-- Fifth Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
+<!-- Container (Group Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">MY GROUP</h3>
+  <p class="w3-center"><em>Here's my group</em></p>
+  
+<!-- Seventh Parallax Image with Contact Text -->
+<div class="bgimg-7 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
