@@ -13,7 +13,6 @@ body, html {
   color: #777;
   line-height: 1.8;
 }
-
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
   background-attachment: fixed;
@@ -21,52 +20,43 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 /* First image (Logo. Full height) */
 .bgimg-1 {
   background-image: url('/photos/math.jpeg');
   min-height: 100%;
 }
-
 /* Second image (About) */
 .bgimg-2 {
   background-image: url("/photos/Anna1.png");
   min-height: 400px;
 }
-
 /* Third image (CV) */
 .bgimg-3 {
-  background-image: url("/photos/math.jpeg");
+  background-image: url("/photos/IMG_3601.JPG");
   min-height: 400px;
 }
-
 /* Fourth image (Publications) */
 .bgimg-4 {
   background-image: url("/photos/math.jpeg");
   min-height: 400px;
 }
-
 /* Fifth image (Talks) */
 .bgimg-5 {
   background-image: url("/photos/math.jpeg");
   min-height: 400px;
 }
-
 /* Sixth image (Group) */
 .bgimg-6 {
-  background-image: url("/photos/GROUP.jpg");
+  background-image: url("/photos/GROUP.JPG");
   min-height: 400px;
 }
-
 /* Seventh image (Contacts) */
 .bgimg-7 {
   background-image: url("/photos/yard_hub.jpg");
   min-height: 400px;
 }
-
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
-
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1600px) {
   .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
@@ -118,7 +108,7 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
   <p class="w3-center"><em>Hi, I am Anna!</em></p>
-  <p>I studied mathematics at the University of Bologna, in Italy. Currently I am studying for my PhD in Vienna. I am interested in applied mathematics, in particular to linguistics. My PhD project deals with NLP, data science, health and social media.</p>
+  <p>I studied mathematics at the University of Bologna, in Italy. Currently I am in Vienna for my PhD. My research project deals with emotions and mental health in the digital mean. I am interested in applied mathematics, in particular to linguistics. My PhD project deals with NLP, data science, health and social media.</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <img src="photos/Anna1.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
@@ -172,6 +162,7 @@ body, html {
 -->
 
 
+
 <!-- Third Parallax Image with CV Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
@@ -182,18 +173,51 @@ body, html {
 <!-- Container (CV Section) -->
 <div class="w3-content w3-container w3-padding-64" id="cv">
   <h3 class="w3-center">MY CURRICULUM VITAE</h3>
-  <p class="w3-center"><em>Here is my curriculum vitae.</em></p><br>
+  <p class="w3-center"><em>Here is my curriculum.</em></p>
   
-    <p class="w3-large w3-center w3-padding-16">Languages I speak:</p>
-  <p class="w3-wide"><i class="fa fa-camera"></i>Italian</p>
+  <!-- <div class="w3-container w3-card w3-white w3-margin-bottom"> -->
+  <i class="fa fa-suitcase fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Work Experience
+        <div class="w3-container"> 
+          <h5 class="w3-opacity"><b>PhD student</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2019 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+          <p>PhD student at the Medical University Vienna, Section for Science of Complex Systems, CeMSIIS and the Complexity Science Hub Vienna. Project "Emotional Well-Being in the Digital Society" directed by Dr David Garcia and funded by WWTF.</p>
+          <hr>
+        </div>
+      <!-- </div> -->
+
+      <div class="w3-container w3-card w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>University of Bologna</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2016-2018</h6>
+          <p> General and Applied Mathematics-Master´s degree <\p>
+          <p>110/110 cum laude (100%)</p>
+          <hr>
+        </div>
+         <div class="w3-container">
+          <h5 class="w3-opacity"><b>Internship at the Complexity Science Hub Vienna</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>March 2018</h6>
+          <p>Master Duration: 100 hours</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>University of Bologna</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2016</h6>
+          <p>Mathematics-Bachelor´s Degree</p>
+          <p>105/110 (95%)</p>
+          <hr>
+        </div>
+      </div>
+    <p class="w3-large w3-center w3-padding-16"><i class="fa fa-globe fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Languages I speak:</p>
+  <p class="w3-wide">Italian</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">Native speaker</div>
   </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>English</p>
+  <p class="w3-wide">English</p>
   <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">C1</div>
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">C1</div>
   </div>
-  <p class="w3-wide"><i class="fa fa-photo"></i>German</p>
+  <p class="w3-wide">German</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:33%">A2</div>
   </div>
@@ -209,7 +233,7 @@ body, html {
 <!-- Container (Publications Section) -->
 <div class="w3-content w3-container w3-padding-64" id="publications">
   <h3 class="w3-center">PUBLICATIONS</h3>
-  <p class="w3-center"><em>Here is my curriculum vitae lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+  <p class="w3-center"><em>Here my publications will be listed.<br> I just started my PhD and I have not published anything yet.</em></p><br>
   </div>
   
   <!-- Fifth Parallax Image with Talks Text -->
@@ -260,7 +284,7 @@ body, html {
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> VIENNA, AT<br>
-        <i class="fa fa-hospital-o fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Medical University of Vienna <br>
+        <i class="fa fa-hospital-o fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Medical University of Vienna, <br><p> Section for Science of Complex Systems, CeMSIIS <br>
         <i class="fa fa-university fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Complexity Science Hub Vienna<br>
       <!--  <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br> -->
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: dinatale@csh.ac.at<br>
@@ -288,7 +312,6 @@ body, html {
  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
-  I owe the copyright of all the photoes displayed in this webpage
  <!-- 
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
     <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -309,7 +332,6 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -320,7 +342,6 @@ function myFunction() {
         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
     }
 }
-
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
     var x = document.getElementById("navDemo");
