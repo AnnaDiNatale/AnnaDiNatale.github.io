@@ -13,6 +13,24 @@ body, html {
   color: #777;
   line-height: 1.8;
 }
+  /* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  .left{
+  width: 20%;
+  }
+  .right{
+  width:80%
+  }
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7 {
   background-attachment: fixed;
@@ -32,7 +50,7 @@ body, html {
 }
 /* Third image (CV) */
 .bgimg-3 {
-  background-image: url("/photos/master.jpg");
+  background-image: url("/photos/IMG_3601.JPG");
   min-height: 400px;
 }
 /* Fourth image (Publications) */
@@ -236,9 +254,13 @@ body, html {
 <!-- Container (Talks Section) -->
 <div class="w3-content w3-container w3-padding-64" id="talks">
   <h3 class="w3-center">TALKS AND EVENTS</h3>
-  <p class="w3-center"><em>My last talks and events.<br> Click on the images to make them bigger</em></p><br>
-  August 2019, Text analysis with colexification clusters, <em>ESSLLI2019 Summer school, Riga, Latvia.
-  18 July 2019, Subcritical Social Impact and Sentiment in Twitter. <em>IC2S2, Amsterdam, The Nederlands.
+  <p class="w3-center"><em>My last talks and events.</em><br>
+     <p class="w3-left">
+       <ul>
+         <li> August 2019, Text analysis with colexification clusters, <em>ESSLLI2019 Summer school, Riga, Latvia.</em><br></li>
+         <li>18 July 2019, Subcritical Social Impact and Sentiment in Twitter. <em>IC2S2, Amsterdam, The Nederlands.</em> </li>
+  </ul>
+
   </div>
   
 <!-- Sixth Parallax Image with Group Text -->
@@ -271,14 +293,90 @@ body, html {
     <div class="w3-col m4 w3-container">
       <img src="/photos/stairs_hub.jpg" class="w3-image w3-round" style="width:100%">
     </div>
+      <div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p> <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> </p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4"> Vienna, AT</font></p>
+  </div>
+</div>      
+<div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p><i class="fa fa-hospital-o fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4"> Medical University of Vienna,</font></p>
+    <p><font size="4"> Section for Science of Complex Systems, CeMSIIS</font></p>
+  </div>
+</div>
+      <div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p><i class="fa fa-university fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4"> Complexity Science Hub Vienna,</font></p>
+    <p><font size="4"> Josefstädter Straße 39, 1080 Vienna, Austria</font></p>
+  </div>
+</div>
+      <div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4">Email: dinatale<i class="fa fa-at w3-medium"></i>csh.ac.at<br></p>
+  </div>
+</div>
+  </div>
+  <!--
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> VIENNA, AT<br>
         <i class="fa fa-hospital-o fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Medical University of Vienna, <br><p> Section for Science of Complex Systems, CeMSIIS <br>
         <i class="fa fa-university fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Complexity Science Hub Vienna, Josefstädter Straße 39, 1080 Vienna, Austria<br>
-      <!--  <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br> -->
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: dinatale<i class="fa fa-graduation-cap w3-medium"></i>csh.ac.at<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: dinatale<i class="fa fa-at w3-medium"></i>csh.ac.at<br>
       </div>
+      
+      <div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p> <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> </p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4"> Vienna, AT</font></p>
+  </div>
+</div>      
+<div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p><i class="fa fa-hospital-o fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4"> Medical University of Vienna,</font></p>
+    <p><font size="4"> Section for Science of Complex Systems, CeMSIIS</font></p>
+  </div>
+</div>
+      <div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p><i class="fa fa-university fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4"> Complexity Science Hub Vienna,</font></p>
+    <p><font size="4"> Josefstädter Straße 39, 1080 Vienna, Austria</font></p>
+  </div>
+</div>
+      <div class="row">
+  <div class="column" style="background-color:#aaa00;">
+    <p><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></p>
+  </div>
+  <div class="column" style="background-color:#bbb00;">
+    <p><font size="4">Email: dinatale<i class="fa fa-at w3-medium"></i>csh.ac.at<br></p>
+  </div>
+</div>
+-->
+      
+      
+      
+      
+      
       <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
       <form action="/action_page.php" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
