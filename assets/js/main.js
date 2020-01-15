@@ -177,6 +177,7 @@ function populateMetadata(config) {
 }
 
 function setupButtons() {
+    console.log('ehi')
     $("#next-button").click(nextTask);
     $("#prev-button").click(prevTask);
     $(".instruction-button").click(toggleInstructions);
