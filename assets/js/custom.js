@@ -29,6 +29,7 @@ var custom = {
          */
         $(".exp-data").text(taskInput.toString());
         console.log('showTaks');
+        console.log(taskOutput);
         console.log($("#exp-input").val(taskOutput));
         $("#exp-input").val(taskOutput);
         $("#exp-input").focus();
