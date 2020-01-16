@@ -49,7 +49,7 @@ var custom = {
          *   config.meta.aggregate is true, an object with key-value pairs to be merged with the
          *   taskOutput object.
          */
-        console.log($("input[name=Options]:checked").val());
+
         console.log($("input[name=Options]:checked"));
         return $("input[name=Options]:checked").val(); 
     },
