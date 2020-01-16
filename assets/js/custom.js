@@ -49,7 +49,7 @@ var custom = {
          *   config.meta.aggregate is true, an object with key-value pairs to be merged with the
          *   taskOutput object.
          */
-        return $("#exp-input").value();
+        return document.getElementById("exp-input").value; 
     },
     validateTask: function(taskInput, taskIndex, taskOutput) {
         /*
