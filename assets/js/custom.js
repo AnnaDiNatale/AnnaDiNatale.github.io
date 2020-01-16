@@ -29,8 +29,8 @@ var custom = {
          */
         $(".exp-data").text(taskInput.toString());
         console.log('showTaks');
-        console.log($("#exp-input"));
-        console.log($("#exp-input").val(taskOutput));
+        console.log($("input[name=Options]:checked").val());
+
         //$("#exp-input").val(taskOutput);
     },
     collectData: function(taskInput, taskIndex, taskOutput) {
