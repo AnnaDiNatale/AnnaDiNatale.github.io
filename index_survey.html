@@ -58,7 +58,13 @@
             <h4 class="exp-data">Input data for task</h4> 
         </div>
             <!-- <div class="right aligned twelve wide column" id="exp"> --> 
-      <form action="">             
+      <form action=""> 
+       <input type="radio" name="Options" id="hidden" value="6" checked>
+          
+             <script type="text/javascript"> 
+              document.getElementById("hidden").style.display = "none"; 
+             </script>
+         
       <input type="radio" name="Options" id="exp-input" value="1">
       1 - not at all similar meanings
 
@@ -74,14 +80,7 @@
 
       <input type="radio" name="Options" id="exp-input" value="5">
       5 - extremely similar meanings
- 
-      <input type="radio" name="Options" id="hidden" value="6" checked>
-          
-                    <script type="text/javascript"> 
-                    document.getElementById("hidden").style.display = "none"; 
-                    </script>
-        </form>  
-                    
+             </form>        
  
         <!-- ^^ CUSTOM EXPERIMENT MARKUP GOES HERE ^^ -->
         <div class="middle aligned row">
