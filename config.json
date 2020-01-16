@@ -9,9 +9,9 @@
     "instructions": {
         "simple": "These are the instructions for the tasks",
         "steps": [
-            "1) read carefully the pair of words proposed",
-            "2) select the correct label",
-            "instruction3"
+            "read the instructions above",
+            "read carefully the pair of words proposed",
+            "select the correct rating from 1 to 5"
         ],
         "images": []
     },
