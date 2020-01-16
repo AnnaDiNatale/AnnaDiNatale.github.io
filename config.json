@@ -7,7 +7,7 @@
         "aggregate": false
     },
     "instructions": {
-        "simple": "These are the instructions for the tasks",
+        "simple": "",
         "steps": [
             "read the instructions above",
             "read carefully the pair of words proposed",
