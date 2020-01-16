@@ -27,7 +27,7 @@ var custom = {
          * 
          * returns: None
          */
-        $(".exp-data").text("Input for task " + taskInput.toString());
+        $(".exp-data").text(taskInput.toString());
         $("#exp-input").val(taskOutput);
         $("#exp-input").focus();
     },
