@@ -50,6 +50,7 @@ var custom = {
          *   taskOutput object.
          */
         console.log($("input[name=Options]:checked").val());
+        console.log($("input[name=Options]:checked"));
         return $("input[name=Options]:checked").val(); 
     },
     validateTask: function(taskInput, taskIndex, taskOutput) {
