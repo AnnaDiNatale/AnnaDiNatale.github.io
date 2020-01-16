@@ -115,7 +115,6 @@ function addHiddenField(form, name, value) {
 
 function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
-    console.log('here');
     saveTaskData();
     clearMessage();
     $("#submit-button").addClass("loading");
