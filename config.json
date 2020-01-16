@@ -11,7 +11,7 @@
         "steps": [
             "read the instructions above",
             "read carefully the pair of words proposed",
-            "select the correct rating from 1 to 5"
+            "rate the similarity of the pair of words from 1 to 5"
         ],
         "images": []
     },
