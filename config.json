@@ -7,16 +7,16 @@
         "aggregate": false
     },
     "instructions": {
-        "simple": "These are simple instructions for <b>4</b> tasks",
+        "simple": "These are the instructions for the tasks",
         "steps": [
-            "1) read carefully the couple of words proposed",
+            "1) read carefully the pair of words proposed",
             "2) select the correct label",
             "instruction3"
         ],
         "images": []
     },
     "hitCreation": {
-        "title": "HIT Title",
+        "title": "How similar are the meanings of these two words?",
         "description": "How similar are the meanings of these two words?",
         "numTasks": 5,
         "numAssignments": 100,
