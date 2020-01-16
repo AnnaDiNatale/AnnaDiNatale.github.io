@@ -9,7 +9,7 @@
     "instructions": {
         "simple": "",
         "steps": [
-            "read the instructions above",
+            "read the instructions and the examples above",
             "read carefully the pair of words proposed",
             "rate the similarity of the pair of words from 1 to 5"
         ],
