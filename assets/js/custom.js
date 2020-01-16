@@ -31,7 +31,7 @@ var custom = {
         console.log('showTaks');
         console.log($("#exp-input"));
         console.log($("#exp-input").val(taskOutput));
-        $("#exp-input").val(taskOutput);
+        //$("#exp-input").val(taskOutput);
     },
     collectData: function(taskInput, taskIndex, taskOutput) {
         /* 
