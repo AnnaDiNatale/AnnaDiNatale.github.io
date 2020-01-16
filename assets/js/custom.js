@@ -49,9 +49,8 @@ var custom = {
          *   config.meta.aggregate is true, an object with key-value pairs to be merged with the
          *   taskOutput object.
          */
-        console.log(document.getElementById("exp-input").name);
-        console.log(document.getElementById("exp-input").value);
-        return document.getElementById("exp-input").value; 
+        console.log($("input[name=Options]:checked").val());
+        return $("input[name=Options]:checked").val(); 
     },
     validateTask: function(taskInput, taskIndex, taskOutput) {
         /*
