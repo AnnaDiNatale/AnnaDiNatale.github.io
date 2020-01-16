@@ -49,7 +49,7 @@ var custom = {
          *   config.meta.aggregate is true, an object with key-value pairs to be merged with the
          *   taskOutput object.
          */
-        console.log('Ehi');
+        console.log(document.getElementById("exp-input").name);
         console.log(document.getElementById("exp-input").value);
         return document.getElementById("exp-input").value; 
     },
