@@ -70,7 +70,7 @@ var custom = {
         if (taskOutput.trim().length > 0) {
             return null;
         } else {
-            return "please complete the task!";
+            return "Please complete the task!";
         }
     }
 };
