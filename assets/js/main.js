@@ -30,11 +30,7 @@ function getTaskOutputs(i) {
 }
 
 function updateTask() {
-    console.log('updateTask1');
-    console.log($("input[name=Options]:checked").val());
     custom.showTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
-    console.log('updateTask2');
-    console.log($("input[name=Options]:checked").val());
     $("#progress-bar").progress("set progress", state.taskIndex + 1);
     if (state.taskIndex == config.meta.numSubtasks - 1) {
         $("#next-button").addClass("disabled");
@@ -56,8 +52,6 @@ function updateTask() {
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
     }
-    console.log('updateTask3');
-    console.log($("input[name=Options]:checked").val());
 }
 
 function nextTask() {
