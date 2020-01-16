@@ -194,7 +194,7 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs = taskInputs;
+            state.taskInputs = ['plane, aircraft'];
             populateMetadata(config);
             setupButtons(config);
         });
