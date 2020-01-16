@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Meaning similarity",
-        "description": "How similar are the meanings of these words?",
+        "description": "How similar are the meanings of these words? Do they refer to a similar topic or are they completely unrelated?",
         "numSubtasks": 100,
         "disclaimer": "This is a disclaimer. You are participating in this experiment voluntarily.",
         "aggregate": false
