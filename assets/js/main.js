@@ -5,7 +5,7 @@ var config = {};
 
 var state = {
     taskIndex: 0,
-    taskInputs: {["plane, aircraft"]}, 
+    taskInputs: {}, 
     taskOutputs: [],
     assignmentId: gup("assignmentId"),
     workerId: gup("workerId"),
