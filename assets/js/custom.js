@@ -27,17 +27,11 @@ var custom = {
          * 
          * returns: None
          */
-        console.log('showTaks1')
-        console.log($("input[name=Options]:checked").val());
         $(".exp-data").text(taskInput.toString());
-        console.log('showTaks2')
-        console.log($("input[name=Options]:checked").val());
+        console.log('showTaks');
+        console.log($("#exp-input").val(taskOutput));
         $("#exp-input").val(taskOutput);
-        console.log('showTaks3')
-        console.log($("input[name=Options]:checked").val());
         $("#exp-input").focus();
-        console.log('showTaks4')
-        console.log($("input[name=Options]:checked").val());
     },
     collectData: function(taskInput, taskIndex, taskOutput) {
         /* 
