@@ -32,7 +32,6 @@ var custom = {
         console.log(taskOutput);
         console.log($("#exp-input").val(taskOutput));
         $("#exp-input").val(taskOutput);
-        $("#exp-input").focus();
     },
     collectData: function(taskInput, taskIndex, taskOutput) {
         /* 
