@@ -30,6 +30,8 @@ function getTaskOutputs(i) {
 }
 
 function updateTask() {
+    concole.log('updateTask');
+    console.log($("input[name=Options]:checked"));
     custom.showTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     $("#progress-bar").progress("set progress", state.taskIndex + 1);
     if (state.taskIndex == config.meta.numSubtasks - 1) {
