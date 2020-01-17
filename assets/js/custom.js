@@ -28,7 +28,8 @@ var custom = {
          * returns: None
          */
         $(".exp-data").text(taskInput.toString());
-        console.log('showTaks');
+        $("input[name=Options]:checked").val()='6';
+        console.log('showTaks1');
         console.log($("input[name=Options]:checked").val());
 
         //$("#exp-input").val(taskOutput);
