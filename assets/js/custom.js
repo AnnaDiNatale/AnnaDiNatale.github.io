@@ -28,7 +28,6 @@ var custom = {
          * returns: None
          */
         $(".exp-data").text(taskInput.toString());
-        //$("input[name=Options]:checked").val()='6';
         document.getElementById("hidden").checked = true;
         //$("#exp-input").val(taskOutput);
     },
