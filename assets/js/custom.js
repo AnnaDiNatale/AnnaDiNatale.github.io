@@ -52,13 +52,7 @@ var custom = {
          */
 
         console.log($("input[name=Options]:checked"));
-        outputOptions=$("input[name=Options]:checked");
-        if((!outputOptions.length > 0)&&(!document.getElementById("hidden").checked == true)){
-        return"dunno";    
-        }
-        else{
         return $("input[name=Options]:checked").val();
-        }
     },
     validateTask: function(taskInput, taskIndex, taskOutput) {
         /*
