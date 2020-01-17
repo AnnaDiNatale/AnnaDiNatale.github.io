@@ -179,6 +179,8 @@ function populateMetadata(config) {
 function setupButtons() {
     $("#next-button").click(nextTask);
     $("#prev-button").click(prevTask);
+    $("#dunno-button").click(taskOutput="dunno");
+    $("#dunno-button").click(nextTask);
     $(".instruction-button").click(toggleInstructions);
     $("#submit-button").click(submitHIT);
     if (state.assignmentId == "ASSIGNMENT_ID_NOT_AVAILABLE") {
