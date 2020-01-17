@@ -27,6 +27,7 @@ var custom = {
          * 
          * returns: None
          */
+        console.log($(".exp-data").text(taskInput.toString()));
         $(".exp-data").text(taskInput.toString());
         document.getElementById("hidden").checked = true;
         //$("#exp-input").val(taskOutput);
