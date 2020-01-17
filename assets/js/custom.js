@@ -29,6 +29,7 @@ var custom = {
          */
         $(".exp-data").text(taskInput.toString());
         $("input[name=Options]:checked").val()='6';
+        //document.getElementById("hidden").checked = true;
         console.log('showTaks1');
         console.log($("input[name=Options]:checked").val());
 
