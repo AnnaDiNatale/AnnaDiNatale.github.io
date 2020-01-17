@@ -179,7 +179,7 @@ function populateMetadata(config) {
 function setupButtons() {
     $("#next-button").click(nextTask);
     //$("#prev-button").click(prevTask);
-    $("#prev-button").click(taskOutput="dunno");
+    //$("#prev-button").click(taskOutput="dunno");
     $("#prev-button").click(nextTask);
     $(".instruction-button").click(toggleInstructions);
     $("#submit-button").click(submitHIT);
