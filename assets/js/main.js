@@ -32,7 +32,6 @@ function getTaskOutputs(i) {
 function updateTask() {
     custom.showTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     $("#progress-bar").progress("set progress", state.taskIndex + 1);
-    $("#prev-button").removeClass("disabled")
     if (state.taskIndex == config.meta.numSubtasks - 1) {
         $("#next-button").addClass("disabled");
         /* if (state.taskIndex != 0) {
@@ -44,12 +43,12 @@ function updateTask() {
         $("#final-task-fields").css("display", "block");
     } else if (state.taskIndex == 0) {
         //$("#next-button").removeClass("disabled");
-        $("#prev-button").addClass("disabled");
+        //$("#prev-button").addClass("disabled");
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
     } else {
         //$("#next-button").removeClass("disabled");
-        $("#prev-button").removeClass("disabled");
+        //$("#prev-button").removeClass("disabled");
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
     }
