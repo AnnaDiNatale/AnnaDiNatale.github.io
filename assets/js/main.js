@@ -34,20 +34,20 @@ function updateTask() {
     $("#progress-bar").progress("set progress", state.taskIndex + 1);
     if (state.taskIndex == config.meta.numSubtasks - 1) {
         $("#next-button").addClass("disabled");
-        if (state.taskIndex != 0) {
+        /* if (state.taskIndex != 0) {
             $("#prev-button").removeClass("disabled");
         } else {
             $("#prev-button").addClass("disabled");
-        }
+        } */
         $("#submit-button").removeClass("disabled");
         $("#final-task-fields").css("display", "block");
     } else if (state.taskIndex == 0) {
-        $("#next-button").removeClass("disabled");
+        //$("#next-button").removeClass("disabled");
         $("#prev-button").addClass("disabled");
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
     } else {
-        $("#next-button").removeClass("disabled");
+        //$("#next-button").removeClass("disabled");
         $("#prev-button").removeClass("disabled");
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
@@ -178,9 +178,9 @@ function populateMetadata(config) {
 
 function setupButtons() {
     $("#next-button").click(nextTask);
-    $("#prev-button").click(prevTask);
-    $("#dunno-button").click(taskOutput="dunno");
-    $("#dunno-button").click(nextTask);
+    //$("#prev-button").click(prevTask);
+    $("#prev-button").click(taskOutput="dunno");
+    $("#prev-button").click(nextTask);
     $(".instruction-button").click(toggleInstructions);
     $("#submit-button").click(submitHIT);
     if (state.assignmentId == "ASSIGNMENT_ID_NOT_AVAILABLE") {
