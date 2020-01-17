@@ -181,8 +181,6 @@ function setupButtons() {
     //$("#prev-button").click(prevTask);
     //$("#prev-button").click(taskOutput="dunno");
     //$(".exp-data").text(taskInput.toString())
-    console.log($(".exp-data"));
-    console.log($(".exp-data".text()));
     $("#prev-button").click(nextTask);
     $(".instruction-button").click(toggleInstructions);
     $("#submit-button").click(submitHIT);
