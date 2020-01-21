@@ -17,6 +17,10 @@ function saveTaskData() {
         var updates = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         $.extend(state.taskOutputs, updates);
     } else {
+        var date = new Date();
+        var timestamp = date.getTime();
+        console.log(timestamp)
+        state.timeOutputs[state.taskIndex]=timestamp;
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     }
 }
@@ -138,13 +142,13 @@ function addHiddenField(form, name, value) {
     }
 }*/
 
-function download(content, fileName, contentType) {
+/*function download(content, fileName, contentType) {
     var a = document.createElement("a");
     var file = new Blob([content], {type: contentType});
     a.href = URL.createObjectURL(file);
     a.download = fileName;
     a.click();
-}
+}*/
 
 function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
@@ -216,7 +220,7 @@ function setupButtons() {
     //$("#prev-button").click(prevTask);
     //$("#prev-button").click(taskOutput="dunno");
     //$(".exp-data").text(taskInput.toString())
-    $("#prev-button").click(nextTask);
+    //$("#prev-button").click(nextTask);
     $("#consent-button").click(toggleInstructions);
     $(".instruction-button").click(toggleInstructions);
     $("#submit-button").click(submitHIT);
