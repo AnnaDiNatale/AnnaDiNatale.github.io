@@ -87,8 +87,8 @@ function toggleInstructions() {
     $("#informed-consent").css("display","flex");
     updateTask();
     }
-    else if (($("#experiment").css("display") == "none")&&(!($("#informed-consent").css("display")=="none"))) {
-        $("#informed-consent").css("display","flex");
+    else if (($("#experiment").css("display") == "none")&&($("#informed-consent").css("display")=="flex")) {
+        $("#informed-consent").css("display","none");
         $("#experiment").css("display", "flex");
         $("#instructions").css("display", "none");
         updateTask();
