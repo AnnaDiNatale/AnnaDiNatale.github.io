@@ -191,6 +191,7 @@ function setupButtons() {
     //$("#prev-button").click(taskOutput="dunno");
     //$(".exp-data").text(taskInput.toString())
     $("#prev-button").click(nextTask);
+    $("#consent-button").click(nextTask);
     $(".instruction-button").click(toggleInstructions);
     $("#submit-button").click(submitHIT);
     if (state.assignmentId == "ASSIGNMENT_ID_NOT_AVAILABLE") {
