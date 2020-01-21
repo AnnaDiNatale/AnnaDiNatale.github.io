@@ -82,9 +82,9 @@ function toggleInstructions() {
     console.log($("#informed-consent").css("display"))
     console.log($("#instructions").css("display"))
     if (($("#experiment").css("display") == "none")&&($("#instructions").css("display")=="flex")) {
-    $("#experiment").css("display", "none");
+    $("#experiment").css("display", "flex");
     $("#instructions").css("display", "none");
-    $("#informed-consent").css("display","flex");
+    $("#informed-consent").css("display","none");
     updateTask();
     }
     else if (($("#experiment").css("display") == "none")&&($("#informed-consent").css("display")=="flex")) {
