@@ -145,7 +145,6 @@ function download(content, fileName, contentType) {
     a.download = fileName;
     a.click();
 }
-download(jsonData, 'json.txt', 'text/plain');
 
 function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
@@ -172,7 +171,7 @@ function submitHIT() {
     addHiddenField(form, 'feedback', $("#feedback-input").val());
     console.log('here')
     console.log(form)
-    download(form,'AnnaDiNatale.github.io/results/results.txt','text/plain');
+    download(form,'results.txt','text/plain');
 
     $("#submit-form").attr("action", submitUrl); 
     $("#submit-form").attr("method", "POST"); 
