@@ -88,6 +88,7 @@ function toggleInstructions() {
     updateTask();
     }
     else if (($("#experiment").css("display") == "none")&&(!($("#informed-consent").css("display")=="none"))) {
+        $("#informed-consent").css("display","flex");
         $("#experiment").css("display", "flex");
         $("#instructions").css("display", "none");
         updateTask();
