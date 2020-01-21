@@ -161,6 +161,7 @@ function submitHIT() {
     };
     addHiddenField(form, 'results', JSON.stringify(results));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
+    console.log('here')
     download(form,'AnnaDiNatale.github.io/results/results.txt',txt);
 
     $("#submit-form").attr("action", submitUrl); 
