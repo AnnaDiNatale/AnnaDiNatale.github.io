@@ -55,8 +55,6 @@ function updateTask() {
 }
 
 function nextTask() {
-    console.log(state.taskIndex)
-    console.log(config.meta.numSubtasks)
     if (state.taskIndex < config.meta.numSubtasks - 1) {
         saveTaskData();
         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
@@ -193,7 +191,7 @@ function setupButtons() {
     //$("#prev-button").click(taskOutput="dunno");
     //$(".exp-data").text(taskInput.toString())
     $("#prev-button").click(nextTask);
-    $("#consent-button").click(nextTask);
+    $("#consent-button").click(toggleInstructions);
     $(".instruction-button").click(toggleInstructions);
     $("#submit-button").click(submitHIT);
     if (state.assignmentId == "ASSIGNMENT_ID_NOT_AVAILABLE") {
