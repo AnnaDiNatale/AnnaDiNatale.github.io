@@ -78,6 +78,9 @@ function prevTask() {
 }
 
 function toggleInstructions() {
+    console.log($("#experiment").css("display"))
+    console.log($("#informed-consent").css("display"))
+    console.log($("#instructions").css("display"))
     if (($("#experiment").css("display") == "none")&&($("#informed-consent").css("display")=="none") {
     $("#experiment").css("display", "none");
     $("#instructions").css("display", "none");
