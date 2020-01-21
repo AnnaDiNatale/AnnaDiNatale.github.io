@@ -169,9 +169,7 @@ function submitHIT() {
     };
     addHiddenField(form, 'results', JSON.stringify(results));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
-    console.log('here')
-    console.log(form)
-    download(form,'results.txt','text/plain');
+    #download(form,'results.txt','text/plain');
 
     $("#submit-form").attr("action", submitUrl); 
     $("#submit-form").attr("method", "POST"); 
