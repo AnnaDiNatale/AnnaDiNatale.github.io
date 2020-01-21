@@ -143,6 +143,12 @@ function submitHIT() {
     };
     addHiddenField(form, 'results', JSON.stringify(results));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
+    var fs = require('form');
+    fs.writeFile("test.txt", jsonData, function(err) {
+    if (err) {
+         console.log(err);
+    }
+    });
 
     $("#submit-form").attr("action", submitUrl); 
     $("#submit-form").attr("method", "POST"); 
