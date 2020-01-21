@@ -120,7 +120,7 @@ function addHiddenField(form, name, value) {
     form.append(input);
 }
 
-function download(data, filename, type) {
+/*function download(data, filename, type) {
     var file = new Blob([data], {type: type});
     if (window.navigator.msSaveOrOpenBlob) // IE10+
         window.navigator.msSaveOrOpenBlob(file, filename);
@@ -136,7 +136,16 @@ function download(data, filename, type) {
             window.URL.revokeObjectURL(url);  
         }, 0); 
     }
+}*/
+
+function download(content, fileName, contentType) {
+    var a = document.createElement("a");
+    var file = new Blob([content], {type: contentType});
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
 }
+download(jsonData, 'json.txt', 'text/plain');
 
 function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
@@ -162,6 +171,7 @@ function submitHIT() {
     addHiddenField(form, 'results', JSON.stringify(results));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
     console.log('here')
+    console.log(form)
     download(form,'AnnaDiNatale.github.io/results/results.txt','text/plain');
 
     $("#submit-form").attr("action", submitUrl); 
