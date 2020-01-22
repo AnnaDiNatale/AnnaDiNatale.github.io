@@ -16,7 +16,7 @@ var state = {
 function saveTaskData() {
     if (config.meta.aggregate) {
         var timestamp = Date.now();
-        var times = timestamp;
+        var times = state.timeOutputs.push(timestamp);;
         var updates = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         $.extend(state.taskOutputs, updates);
     } else {
