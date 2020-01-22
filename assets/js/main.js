@@ -8,7 +8,7 @@ var state = {
     taskInputs: {}, 
     taskOutputs: [],
     timeOutputs:[],
-    action=[],
+    action:[],
     assignmentId: gup("assignmentId"),
     workerId: gup("workerId"),
 };
