@@ -20,7 +20,7 @@ function saveTaskData() {
         var date = new Date();
         var timestamp = date.getTime();
         console.log(timestamp)
-        state.timeOutputs[state.taskIndex]=timestamp;
+        //state.timeOutputs[state.taskIndex]=timestamp;
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     }
 }
@@ -59,10 +59,7 @@ function updateTask() {
 }
 
 function nextTask() {
-    console.log(state.taskIndex);
-    console.log(config.meta.numSubtasks);
     if (state.taskIndex < config.meta.numSubtasks - 1) {
-        console.log('here');
         saveTaskData();
         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         if (err) {
