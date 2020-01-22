@@ -14,6 +14,7 @@ var state = {
 
 /* HELPERS */
 function saveTaskData() {
+    console.log('SaveTaskData');
     if (config.meta.aggregate) {
         var timestamp = Date.now();
         var times = timestamp;
@@ -87,17 +88,18 @@ function prevTask() {
 function toggleInstructions() {
     //var timestamp = Date.now();
     //state.timeOutputs[state.taskIndex]=timestamp;
-    saveTaskData()
     if (($("#experiment").css("display") == "none")&&($("#instructions").css("display")=="flex")) {
     $("#experiment").css("display", "flex");
     $("#instructions").css("display", "none");
     $("#informed-consent").css("display","none");
+    saveTaskData();
     updateTask();
     }
     else if (($("#experiment").css("display") == "none")&&($("#informed-consent").css("display")=="flex")) {
         $("#informed-consent").css("display","none");
         $("#experiment").css("display", "none");
         $("#instructions").css("display", "flex");
+        saveTaskData();
         updateTask();
     } else {
         saveTaskData();
