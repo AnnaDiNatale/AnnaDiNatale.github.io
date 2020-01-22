@@ -19,7 +19,8 @@ function saveTaskData() {
     } else {
         var date = new Date();
         var timestamp = date.getTime();
-        console.log(timestamp)
+        console.log(timestamp);
+        console.log(Date.now());
         //state.timeOutputs[state.taskIndex]=timestamp;
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     }
