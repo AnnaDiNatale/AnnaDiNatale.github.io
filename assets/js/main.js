@@ -14,7 +14,6 @@ var state = {
 
 /* HELPERS */
 function saveTaskData() {
-    console.log('SaveTaskData');
     if (config.meta.aggregate) {
         var timestamp = Date.now();
         var times = timestamp;
@@ -22,7 +21,7 @@ function saveTaskData() {
         $.extend(state.taskOutputs, updates);
     } else {
         var timestamp = Date.now();
-        state.timeOutputs[state.taskIndex]=timestamp;
+        state.timeOutputs.push(timestamp);
         // for R: as.POSIXct(timestamp/1000, origin="1970-01-01")
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         console.log('time',state.timeOutputs)
