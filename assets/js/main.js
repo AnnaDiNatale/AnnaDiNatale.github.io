@@ -15,6 +15,8 @@ var state = {
 /* HELPERS */
 function saveTaskData() {
     if (config.meta.aggregate) {
+        var timestamp = Date.now();
+        var times = timestamp;
         var updates = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         $.extend(state.taskOutputs, updates);
     } else {
@@ -83,8 +85,9 @@ function prevTask() {
 }
 
 function toggleInstructions() {
-    var timestamp = Date.now();
-    state.timeOutputs[state.taskIndex]=timestamp;
+    //var timestamp = Date.now();
+    //state.timeOutputs[state.taskIndex]=timestamp;
+    saveTaskData()
     if (($("#experiment").css("display") == "none")&&($("#instructions").css("display")=="flex")) {
     $("#experiment").css("display", "flex");
     $("#instructions").css("display", "none");
