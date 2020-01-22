@@ -21,6 +21,7 @@ function saveTaskData() {
         var timestamp = Date.now();
         console.log(timestamp);
         state.timeOutputs[state.taskIndex]=timestamp;
+        // for R: as.POSIXct(timestamp/1000, origin="1970-01-01")
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     }
 }
