@@ -18,14 +18,8 @@ function saveTaskData() {
         var updates = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         $.extend(state.taskOutputs, updates);
     } else {
-        var unix_timestamp = Date.now();
-        var date = new Date(unix_timestamp*1000);
-        var hours = date.getHours();
-        var minutes='0'+date.getMinutes();
-        var seconds = '0'+date.getSeconds();
-        var timestamp = hours+':'+minutes.substr(-2)+':'+seconds.substr(-2);
+        var timestamp = Date.now();
         console.log(timestamp);
-        console.log(Date.now());
         state.timeOutputs[state.taskIndex]=timestamp;
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     }
@@ -75,6 +69,7 @@ function nextTask() {
             updateTask();
             clearMessage();
             console.log("Current collected data", state.taskOutputs);
+            console.log("time",state.timeOutputs);
         }
     }
 }
