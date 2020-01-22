@@ -7,6 +7,7 @@ var state = {
     taskIndex: 0,
     taskInputs: {}, 
     taskOutputs: [],
+    timeOutputs:[],
     assignmentId: gup("assignmentId"),
     workerId: gup("workerId"),
 };
@@ -25,7 +26,7 @@ function saveTaskData() {
         var timestamp = hours+':'+minutes.substr(-2)+':'+seconds.substr(-2);
         console.log(timestamp);
         console.log(Date.now());
-        //state.timeOutputs[state.taskIndex]=timestamp;
+        state.timeOutputs[state.taskIndex]=timestamp;
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     }
 }
