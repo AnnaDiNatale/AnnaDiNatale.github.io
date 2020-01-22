@@ -64,11 +64,13 @@ function updateTask() {
 
 function nextTask() {
     if (state.taskIndex < config.meta.numSubtasks - 1) {
+        console.log('here');
         saveTaskData();
         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         if (err) {
             generateMessage("negative", err);
         } else {
+            console.log('here1');
             state.taskIndex++;
             updateTask();
             clearMessage();
