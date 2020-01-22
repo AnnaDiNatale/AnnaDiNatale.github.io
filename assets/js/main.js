@@ -8,6 +8,7 @@ var state = {
     taskInputs: {}, 
     taskOutputs: [],
     timeOutputs:[],
+    action=[],
     assignmentId: gup("assignmentId"),
     workerId: gup("workerId"),
 };
@@ -70,6 +71,7 @@ function nextTask() {
         if (err) {
             generateMessage("negative", err);
         } else {
+            state.action.push('next');
             state.taskIndex++;
             updateTask();
             clearMessage();
@@ -94,6 +96,7 @@ function toggleInstructions() {
     $("#experiment").css("display", "flex");
     $("#instructions").css("display", "none");
     $("#informed-consent").css("display","none");
+    state.action.push('continue');
     saveTaskData();
     updateTask();
     }
@@ -101,9 +104,11 @@ function toggleInstructions() {
         $("#informed-consent").css("display","none");
         $("#experiment").css("display", "none");
         $("#instructions").css("display", "flex");
+        state.action.push('agree');
         saveTaskData();
         updateTask();
     } else {
+        state.action.push('instructions');
         saveTaskData();
         $("#experiment").css("display", "none");
         $("#instructions").css("display", "flex");
