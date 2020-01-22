@@ -183,7 +183,9 @@ function submitHIT() {
     addHiddenField(form, 'workerId', state.workerId);
     var results = {
         'inputs': state.taskInputs,
-        'outputs': state.taskOutputs
+        'outputs': state.taskOutputs,
+        'time':state.timeOutputs,
+        'actions':state.action
     };
     addHiddenField(form, 'results', JSON.stringify(results));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
