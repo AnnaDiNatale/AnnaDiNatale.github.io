@@ -83,6 +83,8 @@ function prevTask() {
 }
 
 function toggleInstructions() {
+    var timestamp = Date.now();
+    state.timeOutputs[state.taskIndex]=timestamp;
     if (($("#experiment").css("display") == "none")&&($("#instructions").css("display")=="flex")) {
     $("#experiment").css("display", "flex");
     $("#instructions").css("display", "none");
