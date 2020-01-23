@@ -3,7 +3,7 @@
         "title": "Meaning similarity",
         "description": "How similar are the meanings of these words? Do they refer to a similar concept or are they completely unrelated?",
         "numSubtasks": 10,
-        "disclaimer": "This is a disclaimer. You are participating in this experiment voluntarily.",
+        "disclaimer": "You are participating in this experiment voluntarily and you can leave any time.",
         "aggregate": false
     },
     "instructions": {
