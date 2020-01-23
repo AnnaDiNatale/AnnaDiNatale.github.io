@@ -18,8 +18,8 @@
     "hitCreation": {
         "title": "How similar are the meanings of these two words?",
         "description": "How similar are the meanings of these two words?",
-        "numTasks": 10,
-        "numAssignments": 20,
+        "numTasks": 9,
+        "numAssignments": 9,
         "rewardAmount": "0.00",
         "keywords": "meaning, words, labeling, semantic similarity",
         "duration": 1200,
