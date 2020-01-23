@@ -254,7 +254,7 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs = ['plane, aircraft','fact, do', 'whatever, if','4','5','6','7','8','9','10'];
+            state.taskInputs = ['plane aircraft','fact do', 'whatever if','4 5','6 7','8 9','10 11','12 13','14 15','16 17'];
             populateMetadata(config);
             setupButtons(config);
         });
