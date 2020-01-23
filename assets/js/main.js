@@ -258,7 +258,10 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs = ['leg foot','aircraft plane','compulsory inexorable', 'easy simple','mistake wrong',
+            state.taskInputs =['aircraft plane','cut wood','egg tooth','bowl soon','dust cloud', 'leg foot','become do','mud shore',
+                               'love chin','fall house','mularly individual','say sand','long eye','climb field','tree wood','cave nest',
+                               'flow heat','moon month','head roof','uncle cusin']
+                ['leg foot','aircraft plane','compulsory inexorable', 'easy simple','mistake wrong',
                                 'dot point','belly wood','mularly individual','book wrong','human individual','neck nape',
                                'tree wood','moon month','hand arm','edge border','carcass dead','demon magician',
                                 'king president','chieftain queen','before forward'];
