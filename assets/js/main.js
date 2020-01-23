@@ -49,16 +49,19 @@ function updateTask() {
         } */
         $("#submit-button").removeClass("disabled");
         $("#final-task-fields").css("display", "block");
+        $("#congrats").css("display", "block");
     } else if (state.taskIndex == 0) {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").addClass("disabled");
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
+        $("#congrats").css("display", "none");
     } else {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").removeClass("disabled");
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
+        $("#congrats").css("display", "none");
     }
 }
 
