@@ -258,7 +258,10 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs = ['plane aircraft','compulsory inexorable', 'easy simple','mistake wrong','dot point','belly wood','mularly individual','book wrong','human individual','neck nape'];
+            state.taskInputs = ['leg foot','aircraft plane','compulsory inexorable', 'easy simple','mistake wrong',
+                                'dot point','belly wood','mularly individual','book wrong','human individual','neck nape',
+                               'tree wood','moon month','hand arm','edge border','carcass dead','demon magician',
+                                'king president','chieftain queen','before forward'];
             populateMetadata(config);
             setupButtons(config);
         });
