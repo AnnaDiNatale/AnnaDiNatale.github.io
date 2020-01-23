@@ -1,8 +1,11 @@
 html,body{height:initial}#page-title{margin-top:10px}#sample-task{display:none}#instructions{display:none}#instructions-demo{border:1px solid black;margin-bottom:10px}.instructions-img{width:100%}#experiment{display:none}#disclaimer-box{color:#444}.ui.label{margin-bottom:5px}
 .boxed{
-  padding: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   border: 1px solid blue;
-  margin: 2px;
-  border-radius: 20px;
+  margin: 5px;
+  border-radius: 15px;
 }
 /*# sourceMappingURL=overrides.css.map */
