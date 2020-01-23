@@ -27,8 +27,8 @@ var custom = {
          * 
          * returns: None
          */
-        console.log(taskInput)
-        console.log(taskInput.toString().split(" "))
+        console.log(taskInput.toString().split(" ")[0])
+        console.log(taskInput.toString().split(" ")[1])
         $(".exp-data1").text((taskInput.toString()).split(" ")[0]);
         $(".exp-data2").text((taskInput.toString()).split(" ")[1]);
         document.getElementById("hidden").checked = true;
