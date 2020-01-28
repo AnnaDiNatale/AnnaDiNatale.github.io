@@ -17,7 +17,7 @@ var state = {
 function saveTaskData() {
     if (config.meta.aggregate) {
         var timestamp = Date.now();
-        var times = state.timeOutputs.push(timestamp);;
+        var times = state.timeOutputs.push(timestamp);
         var updates = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         $.extend(state.taskOutputs, updates);
     } else {
@@ -170,6 +170,7 @@ function addHiddenField(form, name, value) {
 
 function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
+    state.action.push('submit');
     saveTaskData();
     clearMessage();
     $("#submit-button").addClass("loading");
