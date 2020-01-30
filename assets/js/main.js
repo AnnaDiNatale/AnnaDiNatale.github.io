@@ -49,7 +49,7 @@ function updateTask() {
         } */
         $("#submit-button").removeClass("disabled");
         $("#experiment").css("display", "none");
-        $("#final-task-fields").css("display", "block");
+        $("#final-task-fields").css("display", "flex");
         $("#congrats").css("display", "block");
     } else if (state.taskIndex == 0) {
         //$("#next-button").removeClass("disabled");
