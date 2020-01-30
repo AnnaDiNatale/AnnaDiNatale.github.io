@@ -50,8 +50,8 @@ function updateTask() {
         $("#submit-button").removeClass("disabled");
         $("#experiment").css("display", "none");
         $("#final").css("display","flex");
-        $("#final-task-fields").css("display", "block");
-        $("#congrats").css("display", "block");
+        $("#final-task-fields").css("display", "flex");
+        $("#congrats").css("display", "flex");
     } else if (state.taskIndex == 0) {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").addClass("disabled");
