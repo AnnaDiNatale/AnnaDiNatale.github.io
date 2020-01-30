@@ -41,7 +41,7 @@ function updateTask() {
     custom.showTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     $("#progress-bar").progress("set progress", state.taskIndex + 1);
     if (state.taskIndex == config.meta.numSubtasks - 1) {
-        $("#next-button").addClass("disabled");
+        //$("#next-button").addClass("disabled");
         /* if (state.taskIndex != 0) {
             $("#prev-button").removeClass("disabled");
         } else {
