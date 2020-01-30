@@ -47,7 +47,7 @@ function updateTask() {
         } else {
             $("#prev-button").addClass("disabled");
         } */
-        $("#submit-button").removeClass("disabled");
+        //$("#submit-button").removeClass("disabled");
         
         //$("#final-task-fields").css("display", "block");
         //$("#congrats").css("display", "block");
