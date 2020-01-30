@@ -75,6 +75,15 @@ function nextTask() {
         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         if (err) {
             generateMessage("negative", err);
+        } else if (state.taskIndex == config.meta.numSubtasks - 1){
+            state.action.push('next');
+            state.taskIndex++;
+            updateTask();
+            clearMessage();
+            console.log("Current collected data", state.taskOutputs);
+            console.log("time",state.timeOutputs);
+            console.log("actions",state.action);
+            console.log("Inputs",state.taskInputs);
         } else {
             state.action.push('next');
             state.taskIndex++;
