@@ -48,6 +48,7 @@ function updateTask() {
             $("#prev-button").addClass("disabled");
         } */
         $("#submit-button").removeClass("disabled");
+        $("#experiment").css("display", "none");
         $("#final-task-fields").css("display", "block");
         $("#congrats").css("display", "block");
     } else if (state.taskIndex == 0) {
