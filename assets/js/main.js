@@ -57,7 +57,9 @@ function updateTask() {
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
         $("#congrats").css("display", "none");
-    } else {
+    } else if (state.taskIndex == config.meta.numSubtasks - 1) {
+        $("#final-task-fields").css("display", "flex");
+    }else {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").removeClass("disabled");
         $("#submit-button").addClass("disabled");
