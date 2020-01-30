@@ -48,7 +48,8 @@ function updateTask() {
             $("#prev-button").addClass("disabled");
         } */
         //$("#submit-button").removeClass("disabled");
-        
+        $("#final-task-fields").css("display", "flex");
+        $("#submit-button").removeClass("disabled");
         //$("#final-task-fields").css("display", "block");
         //$("#congrats").css("display", "block");
     } else if (state.taskIndex == 0) {
@@ -57,10 +58,7 @@ function updateTask() {
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
         $("#congrats").css("display", "none");
-    } else if (state.taskIndex == config.meta.numSubtasks - 1) {
-        $("#final-task-fields").css("display", "flex");
-        $("#submit-button").removeClass("disabled");
-    }else {
+    } else {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").removeClass("disabled");
         $("#submit-button").addClass("disabled");
