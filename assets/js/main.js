@@ -80,6 +80,7 @@ function nextTask() {
             state.taskIndex++;
             updateTask();
             clearMessage();
+            console.log(state.taskIndex);
             console.log("Current collected data", state.taskOutputs);
             console.log("time",state.timeOutputs);
             console.log("actions",state.action);
