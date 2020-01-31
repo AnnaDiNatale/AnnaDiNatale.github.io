@@ -66,7 +66,7 @@ if (state.taskIndex == 0) {
         //$("#last").css("display", "block");
         console.log($("#last"));
         $("#submit-button").removeClass("disabled"); 
-        $("#final-task-fields").css("display", "block");
+        //$("#final-task-fields").css("display", "block");
         $("#experiment").css("display", "none");
     } else {
         $("#last").css("display", "none");
