@@ -40,7 +40,8 @@ function getTaskOutputs(i) {
 function updateTask() {
     custom.showTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
     $("#progress-bar").progress("set progress", state.taskIndex + 1);
-    if (state.taskIndex == config.meta.numSubtasks - 1) {
+    //if (state.taskIndex == config.meta.numSubtasks - 1) {
+        
         //$("#next-button").addClass("disabled");
         /* if (state.taskIndex != 0) {
             $("#prev-button").removeClass("disabled");
@@ -52,9 +53,11 @@ function updateTask() {
         //$("#submit-button").removeClass("disabled");
         //$("#final-task-fields").css("display", "block");
         //$("#congrats").css("display", "block");
-    } else if (state.taskIndex == 0) {
+    //} 
+if (state.taskIndex == 0) {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").addClass("disabled");
+        $("#last").css("display", "none");
         $("#submit-button").addClass("disabled");
         $("#final-task-fields").css("display", "none");
         $("#congrats").css("display", "none");
@@ -65,6 +68,7 @@ function updateTask() {
         $("#final-task-fields").css("display", "block");
         $("#experiment").css("display", "none");
     } else {
+        $("#last").css("display", "none");
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").removeClass("disabled");
         $("#submit-button").addClass("disabled");
