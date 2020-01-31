@@ -48,8 +48,8 @@ function updateTask() {
             $("#prev-button").addClass("disabled");
         } */
         //$("#submit-button").removeClass("disabled");
-        $("#final-task-fields").css("display", "flex");
-        $("#submit-button").removeClass("disabled");
+        //$("#final-task-fields").css("display", "flex");
+        //$("#submit-button").removeClass("disabled");
         //$("#final-task-fields").css("display", "block");
         //$("#congrats").css("display", "block");
     } else if (state.taskIndex == 0) {
@@ -61,8 +61,9 @@ function updateTask() {
     } else if (state.taskIndex == config.meta.numSubtasks) {
         $("#last").css("display", "flex");
         $("#submit-button").removeClass("disabled"); 
+        $("#final-task-fields").css("display", "flex");
         $("#experiment").css("display", "none");
-        
+        console.log('haha');
     } else {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").removeClass("disabled");
