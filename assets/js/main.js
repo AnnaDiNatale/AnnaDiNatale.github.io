@@ -68,10 +68,6 @@ function updateTask() {
 }
 
 function nextTask() {
-    console.log('button');
-    console.log(state.taskIndex);
-    console.log(config.meta.numSubtasks);
-    console.log(state.taskIndex == config.meta.numSubtasks - 1)
     if (state.taskIndex < config.meta.numSubtasks - 1) {
         saveTaskData();
         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
@@ -104,6 +100,14 @@ function nextTask() {
             console.log("Inputs",state.taskInputs);
         } else if  (state.taskIndex == config.meta.numSubtasks){
             console.log('here');
+            state.action.push('next');
+            updateTask();
+            clearMessage();
+            console.log(state.taskIndex);
+            console.log("Current collected data", state.taskOutputs);
+            console.log("time",state.timeOutputs);
+            console.log("actions",state.action);
+            console.log("Inputs",state.taskInputs);
         }
 }       
         
