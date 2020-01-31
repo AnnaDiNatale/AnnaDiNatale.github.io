@@ -76,6 +76,7 @@ function nextTask() {
         if (err) {
             generateMessage("negative", err);
         } else if (state.taskIndex == config.meta.numSubtasks - 1){
+            console.log('here1');
             state.action.push('next');
             state.taskIndex++;
             updateTask();
