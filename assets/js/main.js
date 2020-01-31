@@ -61,6 +61,7 @@ function updateTask() {
     } else if (state.taskIndex == config.meta.numSubtasks) {
         $("#last").css("display", "flex");
         $("#submit-button").removeClass("disabled"); 
+        $("#experiment").css("display", "none");
         
     } else {
         //$("#next-button").removeClass("disabled");
