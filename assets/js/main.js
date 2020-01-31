@@ -77,7 +77,21 @@ function nextTask() {
         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         if (err) {
             generateMessage("negative", err);
-        } else if (state.taskIndex == config.meta.numSubtasks - 1){
+        } else {
+            state.action.push('next');
+            state.taskIndex++;
+            updateTask();
+            clearMessage();
+            //console.log('here');
+            console.log(state.taskIndex);
+            console.log(config.meta.numSubtasks)
+            console.log("Current collected data", state.taskOutputs);
+            console.log("time",state.timeOutputs);
+            console.log("actions",state.action);
+            //console.log("Inputs",state.taskInputs);
+        }
+    } 
+     else if (state.taskIndex == config.meta.numSubtasks - 1){
             console.log('here1');
             state.action.push('next');
             state.taskIndex++;
@@ -91,21 +105,10 @@ function nextTask() {
         } else if  (state.taskIndex == config.meta.numSubtasks){
             console.log('here');
         }
-        else {
-            state.action.push('next');
-            state.taskIndex++;
-            updateTask();
-            clearMessage();
-            //console.log('here');
-            console.log(state.taskIndex);
-            console.log(config.meta.numSubtasks)
-            console.log("Current collected data", state.taskOutputs);
-            console.log("time",state.timeOutputs);
-            console.log("actions",state.action);
-            //console.log("Inputs",state.taskInputs);
-        }
-    }
-}
+}       
+        
+       
+
 
 function prevTask() {
     if (state.taskIndex > 0) {
