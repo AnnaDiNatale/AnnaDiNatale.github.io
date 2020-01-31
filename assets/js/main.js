@@ -69,6 +69,7 @@ function updateTask() {
 
 function nextTask() {
     console.log('button');
+    console.log(state.taskIndex)
     if (state.taskIndex < config.meta.numSubtasks - 1) {
         saveTaskData();
         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
