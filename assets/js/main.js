@@ -59,11 +59,11 @@ function updateTask() {
         $("#final-task-fields").css("display", "none");
         $("#congrats").css("display", "none");
     } else if (state.taskIndex == config.meta.numSubtasks) {
+        console.log($("#submit-button"))
         $("#last").css("display", "flex");
         $("#submit-button").removeClass("disabled"); 
-        $("#final-task-fields").css("display", "flex");
+        $("#final-task-fields").css("display", "block");
         $("#experiment").css("display", "none");
-        console.log('haha');
     } else {
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").removeClass("disabled");
