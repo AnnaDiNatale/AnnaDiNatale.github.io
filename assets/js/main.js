@@ -63,8 +63,8 @@ if (state.taskIndex == 0) {
         $("#congrats").css("display", "none");
     } else if (state.taskIndex == config.meta.numSubtasks) {
         console.log($("#submit-button"));
-        $("#last").css("display", "flex");
-        $("#last").css("display", "block");
+        $("last").css("display", "flex");
+        $("last").css("display", "block");
         $("#submit-button").removeClass("disabled"); 
         $("#final-task-fields").css("display", "block");
         $("#experiment").css("display", "none");
