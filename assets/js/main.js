@@ -83,12 +83,15 @@ function nextTask() {
             console.log("time",state.timeOutputs);
             console.log("actions",state.action);
             console.log("Inputs",state.taskInputs);
-        } else {
+        } else if  (state.taskIndex == config.meta.numSubtasks){
+            console.log('here');
+        }
+        else {
             state.action.push('next');
             state.taskIndex++;
             updateTask();
             clearMessage();
-            console.log('here');
+            //console.log('here');
             console.log(state.taskIndex);
             console.log(config.meta.numSubtasks)
             console.log("Current collected data", state.taskOutputs);
