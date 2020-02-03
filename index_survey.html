@@ -68,6 +68,55 @@
         </div>
     </div>
 
+               <div id='last' class="ui top aligned centered relaxed grid">
+            <div class="row">
+            <div class="sixteen wide column">
+                <center>
+                <h2>Congratulations! You reached the end of the study. Here is the last question.</h2>
+                <p style="font-size:28px;"> <b>What is your gender?</b></p>
+                
+                <!-- <form action="" align="left"> --> 
+                <form action="" align="left" > 
+       <input type="radio" name="Gender" id="hidden1" value="" checked="1">
+          
+             <script type="text/javascript"> 
+              document.getElementById("hidden1").style.display = "none"; 
+             </script>
+      <p style="font-size:22px;">   
+      <input type="radio" name="Gender" id="exp-input" value="f">
+      female
+      </p>
+      <p style="font-size:22px;">
+      <input type="radio" name="Gender" id="exp-input" value="m">
+      male
+      </p>
+      <p style="font-size:22px;">
+      <input type="radio" name="Gender" id="exp-input" value="other">
+      other
+      </p>
+      <p style="font-size:22px;">
+      <input type="radio" name="Gender" id="exp-input" value="nodecl">
+      I do not want to say
+      </p>
+                </form>
+                </center>
+                </div>
+             <br>
+                <div class="eight wide column">
+            <!-- <div class="right aligned eight wide column">-->
+                <div id="final-task-fields" class="ui form">
+                    <center><h1>You can leave an optional comment or feedback:</h1></center>
+                    <div id="feedback-field" class="field">
+                        <textarea id="feedback-input" rows="2"></textarea>
+                    </div>
+                    <div class="field">
+                        <div id="submit-button" class="ui green right floated button">Submit</div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+    
     
     <div id="experiment" class="ui top aligned centered relaxed grid">
         <div class="row">
@@ -186,53 +235,6 @@
     </div>
     
 
-            <div id='last' class="ui top aligned centered relaxed grid">
-            <div class="row">
-            <div class="sixteen wide column">
-                <center>
-                <h2>Congratulations! You reached the end of the study. Here is the last question.</h2>
-                <p style="font-size:28px;"> <b>What is your gender?</b></p>
-                
-                <!-- <form action="" align="left"> --> 
-                <form action="" align="left" > 
-       <input type="radio" name="Gender" id="hidden1" value="" checked="1">
-          
-             <script type="text/javascript"> 
-              document.getElementById("hidden1").style.display = "none"; 
-             </script>
-      <p style="font-size:22px;">   
-      <input type="radio" name="Gender" id="exp-input" value="f">
-      female
-      </p>
-      <p style="font-size:22px;">
-      <input type="radio" name="Gender" id="exp-input" value="m">
-      male
-      </p>
-      <p style="font-size:22px;">
-      <input type="radio" name="Gender" id="exp-input" value="other">
-      other
-      </p>
-      <p style="font-size:22px;">
-      <input type="radio" name="Gender" id="exp-input" value="nodecl">
-      I do not want to say
-      </p>
-                </form>
-                </center>
-                </div>
-             <br>
-                <div class="eight wide column">
-            <!-- <div class="right aligned eight wide column">-->
-                <div id="final-task-fields" class="ui form">
-                    <center><h1>You can leave an optional comment or feedback:</h1></center>
-                    <div id="feedback-field" class="field">
-                        <textarea id="feedback-input" rows="2"></textarea>
-                    </div>
-                    <div class="field">
-                        <div id="submit-button" class="ui green right floated button">Submit</div>
-                    </div>
-                </div>
-                    </div>
-                </div>
-            </div>
+ 
 </body>
 </html>
