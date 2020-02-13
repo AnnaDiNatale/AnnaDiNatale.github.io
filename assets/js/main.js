@@ -99,6 +99,11 @@ function nextTask() {
         }
     } 
      else if (state.taskIndex == config.meta.numSubtasks - 1){
+         saveTaskData();
+         var err = custom.validateTask(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
+        if (err) {
+            generateMessage("negative", err);
+        } else {
          console.log('here')
             state.action.push('next');
             state.taskIndex++;
@@ -109,7 +114,9 @@ function nextTask() {
             console.log("time",state.timeOutputs);
             console.log("actions",state.action);
             console.log("Inputs",state.taskInputs);
-        } else if  (state.taskIndex == config.meta.numSubtasks){
+        } 
+     }
+    else if  (state.taskIndex == config.meta.numSubtasks){
             state.action.push('next');
             updateTask();
             clearMessage();
