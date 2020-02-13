@@ -99,6 +99,7 @@ function nextTask() {
         }
     } 
      else if (state.taskIndex == config.meta.numSubtasks - 1){
+         console.log('here')
             state.action.push('next');
             state.taskIndex++;
             updateTask();
