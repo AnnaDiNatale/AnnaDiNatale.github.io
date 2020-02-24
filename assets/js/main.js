@@ -23,7 +23,6 @@ function saveTaskData() {
     } else {
         var timestamp = Date.now();
         state.timeOutputs.push(timestamp);
-        // for R: as.POSIXct(timestamp/1000, origin="1970-01-01")
         state.taskOutputs[state.taskIndex] = custom.collectData(getTaskInputs(state.taskIndex), state.taskIndex, getTaskOutputs(state.taskIndex));
         console.log('time',state.timeOutputs)
     }
@@ -128,8 +127,6 @@ function nextTask() {
         }
 }       
         
-       
-
 
 function prevTask() {
     if (state.taskIndex > 0) {
@@ -244,6 +241,7 @@ function submitHIT() {
     };
     addHiddenField(form, 'times', JSON.stringify(times));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
+    addHiddenField(form, 'gender', $("#Gender").val());
     //download(form,'results.txt','text/plain');
     $("#submit-form").attr("action", submitUrl); 
     $("#submit-form").attr("method", "POST"); 
