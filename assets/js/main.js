@@ -241,7 +241,7 @@ function submitHIT() {
     };
     addHiddenField(form, 'times', JSON.stringify(times));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
-    addHiddenField(form, 'gender', $("#Gender").val());
+    addHiddenField(form, 'gender', $("#gender").val());
     //download(form,'results.txt','text/plain');
     $("#submit-form").attr("action", submitUrl); 
     $("#submit-form").attr("method", "POST"); 
