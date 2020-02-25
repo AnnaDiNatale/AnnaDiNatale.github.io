@@ -304,9 +304,11 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs =['aircraft plane','cut wood','egg tooth','bowl soon','dust cloud', 'leg foot','become do','village house',
-                               'love chin','fall house','mularly individual','say sand','long eye','climb field','tree wood','cave nest',
-                               'ox cow','moon month','head hair','head roof']
+            state.taskInputs =['egg tooth','leg foot','cut wood','bowl soon','dust cloud','aircraft plane','become do',
+                               'mularly individual','love chin','village house','tree wood','fall house','moon month',
+                               'convention affierty','plate plain','ox cow','plate dish','say sand','head hair',
+                               'language word','press happiness','head roof','long eye','cave nest','town splash',
+                               'border pill','food full','ant termite','climb field']
             populateMetadata(config);
             setupButtons(config);
         });
