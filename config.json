@@ -20,7 +20,7 @@
         "description": "How similar are the meanings of these two words?",
         "numTasks": 5,
         "numAssignments": 1,
-        "rewardAmount": "0.00",
+        "rewardAmount": "1.00",
         "keywords": "meaning, words, labeling, semantic similarity",
         "duration": 1200,
         "lifetime": 86400,
