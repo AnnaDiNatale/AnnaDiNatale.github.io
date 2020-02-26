@@ -16,7 +16,7 @@
         "images": []
     },
     "hitCreation": {
-        "title": "How similar are the meanings of these two words?",
+        "title": "Meaning similarity",
         "description": "How similar are the meanings of these two words?",
         "numTasks": 5,
         "numAssignments": 1,
