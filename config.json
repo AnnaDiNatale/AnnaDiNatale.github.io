@@ -2,7 +2,7 @@
     "meta": {
         "title": "Meaning similarity",
         "description": "How similar are the meanings of these words? Do they refer to a similar concept or are they completely unrelated?",
-        "numSubtasks": 2,
+        "numSubtasks": 29,
         "disclaimer": "You are participating in this experiment voluntarily and you can leave at any time.",
         "aggregate": false
     },
