@@ -34,7 +34,7 @@ form .likert:before {
 }
 form .likert li {
   display:inline-block;
-  width:30%;
+  width:3%;
   text-align:center;
   vertical-align: top;
 }
