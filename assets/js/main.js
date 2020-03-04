@@ -63,7 +63,6 @@ if (state.taskIndex == 0) {
     } else if (state.taskIndex == config.meta.numSubtasks) {
         $("#last").css("display", "flex");
         //$("#last").css("display", "block");
-        console.log($("#last"));
         $("#submit-button").removeClass("disabled"); 
         $("#final-task-fields").css("display", "flex");
         $("#experiment").css("display", "none");
@@ -89,8 +88,6 @@ function nextTask() {
             updateTask();
             clearMessage();
             //console.log('here');
-            console.log(state.taskIndex);
-            console.log(config.meta.numSubtasks)
             console.log("Current collected data", state.taskOutputs);
             console.log("time",state.timeOutputs);
             console.log("actions",state.action);
