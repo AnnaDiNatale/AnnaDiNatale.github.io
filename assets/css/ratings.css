@@ -1,6 +1,8 @@
 html,body {padding:0;margin:0;}
 .wrap {
   font:16px Arial, san-serif;
+  position: absolute;
+  left:50%;
 }
 h1.likert-header {
   padding-left:4.25%;
