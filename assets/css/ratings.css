@@ -1,11 +1,11 @@
 html,body {padding:0;margin:0;}
 .wrap {
-  font:16px Arial, san-serif;
+  font:18px Arial, san-serif;
   position:relative;
   left:20%;
 }
 .wrap-1 {
-  font:16px Arial, san-serif;
+  font:18px Arial, san-serif;
   position:relative;
   left:-20%;
 }
