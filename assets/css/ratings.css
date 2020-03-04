@@ -4,6 +4,9 @@ html,body {padding:0;margin:0;}
   position:relative;
   left:20%;
 }
+.wrap-1 {
+  font:16px Arial, san-serif;
+}
 h1.likert-header {
   padding-left:4.25%;
   margin:20px 0 0;
