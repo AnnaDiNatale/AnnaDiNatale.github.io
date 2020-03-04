@@ -100,7 +100,6 @@ function nextTask() {
         if (err) {
             generateMessage("negative", err);
         } else {
-         console.log('here')
             state.action.push('next');
             state.taskIndex++;
             updateTask();
@@ -116,7 +115,6 @@ function nextTask() {
             state.action.push('next');
             updateTask();
             clearMessage();
-            console.log(state.taskIndex);
             console.log("Current collected data", state.taskOutputs);
             console.log("time",state.timeOutputs);
             console.log("actions",state.action);
