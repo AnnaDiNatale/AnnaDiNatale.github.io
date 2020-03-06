@@ -116,7 +116,6 @@ function nextTask() {
             state.action.push('next');
             updateTask();
             clearMessage();
-        console.log('here');
             console.log("Current collected data", state.taskOutputs);
             console.log("time",state.timeOutputs);
             console.log("actions",state.action);
@@ -215,6 +214,8 @@ function submitHIT() {
     };
     addHiddenField(form, 'times', JSON.stringify(times));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
+    console.log($("#gender").val());
+    console.log($("#gender"));
     addHiddenField(form, 'gender', $("#gender").val());
     //download(form,'results.txt','text/plain');
     $("#submit-form").attr("action", submitUrl); 
