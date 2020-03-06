@@ -187,6 +187,8 @@ function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
     console.log(submitUrl)
     console.log(config.hitCreation.production)
+    console.log($("#gender").val());
+    console.log($("#gender"));
     state.action.push('submit');
     saveTaskData();
     clearMessage();
@@ -214,8 +216,6 @@ function submitHIT() {
     };
     addHiddenField(form, 'times', JSON.stringify(times));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
-    console.log($("#gender").val());
-    console.log($("#gender"));
     addHiddenField(form, 'gender', $("#gender").val());
     //download(form,'results.txt','text/plain');
     $("#submit-form").attr("action", submitUrl); 
