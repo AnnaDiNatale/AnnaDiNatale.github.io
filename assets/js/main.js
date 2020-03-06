@@ -116,6 +116,7 @@ function nextTask() {
             state.action.push('next');
             updateTask();
             clearMessage();
+        console.log('here');
             console.log("Current collected data", state.taskOutputs);
             console.log("time",state.timeOutputs);
             console.log("actions",state.action);
@@ -182,31 +183,6 @@ function addHiddenField(form, name, value) {
     form.append(input);
 }
 
-/*function download(data, filename, type) {
-    var file = new Blob([data], {type: type});
-    if (window.navigator.msSaveOrOpenBlob) // IE10+
-        window.navigator.msSaveOrOpenBlob(file, filename);
-    else { // Others
-        var a = document.createElement("a"),
-                url = URL.createObjectURL(file);
-        a.href = url;
-        a.download = filename;
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function() {
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);  
-        }, 0); 
-    }
-}*/
-
-/*function download(content, fileName, contentType) {
-    var a = document.createElement("a");
-    var file = new Blob([content], {type: contentType});
-    a.href = URL.createObjectURL(file);
-    a.download = fileName;
-    a.click();
-}*/
 
 function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
