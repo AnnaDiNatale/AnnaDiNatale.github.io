@@ -1,4 +1,4 @@
-html,body{height:initial}#page-title{margin-top:10px}#sample-task{display:none}#instructions{display:none}#final-task-fields{display:none}#feedback-field{display:none}#last{display:none}#instructions-demo{border:1px solid black;margin-bottom:10px}.instructions-img{width:100%}#experiment{display:none}#disclaimer-box{color:#444;fornt-size:12px}.ui.label{margin-bottom:5px}
+html,body{height:initial}#page-title{margin-top:10px}#sample-task{display:none}#instructions{display:none}#final-task-fields{display:none}#feedback-field{display:none}#last{display:none}#instructions-demo{border:1px solid black;margin-bottom:10px}.instructions-img{width:100%}#experiment{display:none}#disclaimer-box{color:#444;fornt-size:8px}.ui.label{margin-bottom:5px}
 .boxed{
   padding-right: 5px;
   padding-left: 5px;
