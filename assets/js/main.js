@@ -187,8 +187,8 @@ function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
     console.log($("#gender").val());
     console.log($("#gender"));
-    console.log(submitUrl)
-    console.log(config.hitCreation.production)
+    //console.log(submitUrl)
+    //console.log(config.hitCreation.production)
     state.action.push('submit');
     saveTaskData();
     clearMessage();
