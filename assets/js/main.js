@@ -9,6 +9,7 @@ var state = {
     taskOutputs: [],
     timeOutputs:[],
     action:[],
+    gender:[],
     assignmentId: gup("assignmentId"),
     workerId: gup("workerId"),
 };
@@ -185,11 +186,10 @@ function addHiddenField(form, name, value) {
 
 function submitHIT() {
     var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
-    console.log($("#gender").val());
-    console.log($("#gender"));
     //console.log(submitUrl)
     //console.log(config.hitCreation.production)
     state.action.push('submit');
+    state.gender.push($("#gender").val())
     saveTaskData();
     clearMessage();
     $("#submit-button").addClass("loading");
