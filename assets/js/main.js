@@ -189,7 +189,7 @@ function submitHIT() {
     //console.log(submitUrl)
     //console.log(config.hitCreation.production)
     state.action.push('submit');
-    state.gender.push($("#gender").val())
+    state.gender.push($("#gender").val());
     saveTaskData();
     clearMessage();
     $("#submit-button").addClass("loading");
@@ -216,7 +216,7 @@ function submitHIT() {
     };
     addHiddenField(form, 'times', JSON.stringify(times));
     addHiddenField(form, 'feedback', $("#feedback-input").val());
-    addHiddenField(form, 'gender', $("#gender").val());
+    addHiddenField(form, 'gender', state.gender);
     //download(form,'results.txt','text/plain');
     $("#submit-form").attr("action", submitUrl); 
     $("#submit-form").attr("method", "POST"); 
