@@ -68,7 +68,7 @@ if (state.taskIndex == 0) {
         $("#final-task-fields").css("display", "flex");
         console.log($("#final-task-fields").css("display"))
         $("#experiment").css("display", "none");
-    else {
+    }  else {
         $("#last").css("display", "none");
         //$("#next-button").removeClass("disabled");
         //$("#prev-button").removeClass("disabled");
