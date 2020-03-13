@@ -283,7 +283,7 @@ $(document).ready(function() {
                                'mularly individual','love chin','village house','tree wood','fall house','moon month',
                                'convention affierty','plate plain','ox cow','plate dish','say sand','head hair',
                                'language word','press happiness','head roof','long eye','cave nest','town splash',
-                               'border pill','food full','ant termite','climb field','hole mouth']
+                               'border pill','food full','ant termite','climb field','hole mouth','test test']
             populateMetadata(config);
             setupButtons(config);
         });
