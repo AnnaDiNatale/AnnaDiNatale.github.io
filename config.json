@@ -18,7 +18,7 @@
     "hitCreation": {
         "title": "Meaning similarity",
         "description": "How similar are the meanings of these two words?",
-        "numTasks": 5,
+        "numTasks": 1,
         "numAssignments": 5,
         "rewardAmount": "1.00",
         "keywords": "meaning, words, labeling, semantic similarity",
