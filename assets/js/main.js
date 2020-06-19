@@ -279,11 +279,11 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs = ["nest lair","fortress tower",      "stepfather father",   "head roof",           "plate plain",         "precipice valley",   
-"lagoon swamp",        "become do",           "river stream",        "aircraft plane",      "climb field",         "mountain stone",     
-"bowl soon",           "chieftain president", "town splash",         "plate dish",          "food full",           "say sand",           
-"mularly individual",  "long eye",            "press happiness",     "cut wood",            "stab pound",          "toe finger",         
-"cave ditch",          "convention affierty", "border pill",         "seed dog",            "fall house",          "love chin"]
+            state.taskInputs =  ["plate dish",          "plate plain",         "town splash",         "short few",           "become do",           "mularly individual", 
+"fall house",          "love chin",           "press happiness",     "border pill",         "hook anchor",         "river drink",        
+"livestock cattle",    "chicken bird",        "bowl soon",           "say sand",            "aircraft plane",      "climb field",        
+"take choose",         "food full",           "soul ghost",          "head roof",           "vulture eagle",       "cut wood",           
+"imitate learn",       "convention affierty", "long eye",            "love pity",           "measure imitate",     "clean holy" ]
             populateMetadata(config);
             setupButtons(config);
         });
