@@ -279,12 +279,11 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs =  ["border pill",              "family sibling",           "fall house",               "grain rye",                "plate dish",              
- "become do",                "mularly individual",       "press happiness",          "head roof",                "say admit",               
-"bowl soon",                "honey candy",              "food full",                "cut wood",                 "say sand",                
-"granddaughter grandchild","crouch bend",              "love chin",                "people person",            "barley oat",              
-"lend borrow",              "move change",              "town splash",              "believe worship",          "long eye",                
-"climb field",              "aircraft plane",           "rake fork",                "plate plain",              "convention affierty" ]
+            state.taskInputs =  ["aircraft plane",      "bruise swelling",     "fall house",          "hit pound",           "tobacco leaf",        "food full",          
+"become do",           "long eye",            "love chin",           "plate dish",          "mularly individual",  "plate plain",        
+"convention affierty", "winter autumn",       "broom brush",         "cut wood",            "wheel cart",          "waist body",        
+"town splash",         "say sand",            "border pill",         "deceive swindle",     "cry shout",           "blue grey",          
+"jaw chin",            "bowl soon",           "head roof",           "foot footprint",      "press happiness",     "climb field" ]
             populateMetadata(config);
             setupButtons(config);
         });
