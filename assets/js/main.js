@@ -283,7 +283,7 @@ $(document).ready(function() {
 "heel foot",           "aircraft plane",      "black green",         "cut wood",            "die kill",            "plate plain",        
 "become do",           "push pull",           "head roof",           "plate dish",          "mularly individual",  "border pill",        
 "sister brother",      "middle between",      "climb field",         "carry own",           "bowl soon",           "town splash",        
-"convention affierty", "knead grind",         "press happiness",     "long eye",            "sit eat",             "son child","test test"]
+"convention affierty", "knead grind",         "press happiness",     "long eye",            "sit eat",             "son child"]
 
             populateMetadata(config);
             setupButtons(config);
