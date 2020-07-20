@@ -283,7 +283,7 @@ $(document).ready(function() {
                                "cut wood","love chin","touch catch","bait food","head roof","disappear misplace", 
                                "flow float","press happiness","fall house","thing item","say sand","food full",          
                                "border pill","climb field","become do","salty brackish","canoe outrigger","announce preach",    
-                               "aircraft plane","town splash","master God","plate plain","feather hair","convention affierty"]
+                               "aircraft plane","town splash","master God","plate plain","feather hair","convention affierty","test test"]
 
             populateMetadata(config);
             setupButtons(config);
