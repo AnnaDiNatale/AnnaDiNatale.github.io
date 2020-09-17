@@ -278,9 +278,10 @@ $(document).ready(function() {
         if (config.meta.aggregate) {
             state.taskOutputs = {};
         }
+        $.getJSON("questions.json").done(function(data) { questions=data}
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs =  config.hitCreation.questions
-
+            state.taskInputs =  questions
+            console.log(questions);
             populateMetadata(config);
             setupButtons(config);
         });
