@@ -26,6 +26,6 @@
         "lifetime": 86400,
         "taskUrl": "https://annadinatale.github.io/index_survey.html",
         "production": false,
-        "number": "two"
+        "questionNumber": "two"
     }
 }
