@@ -279,11 +279,7 @@ $(document).ready(function() {
             state.taskOutputs = {};
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
-            state.taskInputs =  [ "convention affierty", "border pill",         "plate plain",         "flat straight",       "fever heat",          "say sand",           
-"love chin",           "plate dish",          "food bread",          "head roof",           "cut wood",            "send give",          
-"become do",           "aircraft plane",      "fire burn",           "quarrel fight",       "bowl soon",           "long eye",           
-"fall house",          "climb field",         "mularly individual",  "fur color",           "food full",          "big enough",         
-"town splash",         "find look",           "bitter difficult",    "press happiness",     "vulture crow",        "speak pray","test test"]
+            state.taskInputs =  config.hitCreation.questions
 
             populateMetadata(config);
             setupButtons(config);
