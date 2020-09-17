@@ -278,7 +278,7 @@ $(document).ready(function() {
         if (config.meta.aggregate) {
             state.taskOutputs = {};
         }
-        $.getJSON("questions.json").done(function(data) { questions=data}
+        $.getJSON("questions.json").done(function(data) { questions=data});
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
             state.taskInputs =  questions.1;
             console.log(questions);
