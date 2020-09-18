@@ -282,7 +282,7 @@ $(document).ready(function() {
         $.getJSON("questions.json").done(function(data) { questions=data;
             ind=config.hitCreation.questionNumber;
                                                          console.log(ind);
-            state.taskInputs = questions.ind;
+            state.taskInputs = questions.one;
             populateMetadata(config);
             setupButtons(config);
         });
