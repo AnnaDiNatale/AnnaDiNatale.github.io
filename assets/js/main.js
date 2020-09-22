@@ -280,8 +280,7 @@ $(document).ready(function() {
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
         $.getJSON("questions.json").done(function(data) { questions=data;
-            state.taskInputs = questions.four;
-            console.log('two');
+            state.taskInputs = questions.five;
             populateMetadata(config);
             setupButtons(config);
         });
