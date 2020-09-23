@@ -19,7 +19,7 @@
         "title": "Meaning similarity",
         "description": "How similar are the meanings of these two words?",
         "numTasks": 1,
-        "numAssignments": 5,
+        "numAssignments": 3,
         "rewardAmount": "1.00",
         "keywords": "meaning, words, labeling, semantic similarity",
         "duration": 1200,
