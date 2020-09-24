@@ -1,0 +1,275 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>survey</title>
+    <meta name="description" content="mturk task template">
+    <meta name="author" content="annadn">
+    
+    <link rel="stylesheet" href="assets/lib/semantic/semantic.min.css">
+    <link rel="stylesheet" href="assets/css/overrides.css">
+    <link rel="stylesheet" href="assets/css/radiobuttons.css">
+    <link rel="stylesheet" href="assets/css/ratings.css">
+    <script src="assets/lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="assets/lib/semantic/semantic.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <style>
+.center {
+ text-align: center
+}
+</style>
+    
+</head>
+
+<body>
+<div class="ui container">
+    <h1 id="page-title" class="meta-title ui centered dividing header"></h1>
+    
+        <div id="informed-consent" class="ui top aligned centered grid">
+        <div class="row">
+            <div class="left aligned fourteen wide column">
+                <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                <strong>Attention!</strong> You are not allowed to take this survey more than once. If you do so, your assignment will be rejected 
+                    and you will not be entitled to the monetary reward
+                </div>
+ <!--               <h1><center>Attention!</center></h1>
+                <p>You are not allowed to take this survey more than once. If you do so, you results will be rejected 
+                    and you will not be entitled to the monetary reward</p> -->
+                <h2>Informed consent</h2>
+                <p>You are invited to participate in a web-based online study on meaning similarity of words. 
+                    It should take approximately <b>10</b> minutes to complete.</p>
+                <h3>Participation</h3>
+                <p>Your participation in this survey is voluntary. You may exit the survey at any time.</p>
+                <h3>Confidentiality</h3>
+                <p>Your survey answers will be stored by Amazon Mechanical Turk. The researchers do not have access to 
+                    identifying information. The anonymous data will be used for non-profit academic research.</p>
+                    <div id="consent-button" class="ui primary right floated button">I give my informed consent</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div id="instructions" class="ui top aligned centered grid">
+        <div class="row">
+            <div class="left aligned fourteen wide column">
+                <h1>Instructions</h1>
+                <p><b class="meta-desc"></b></p>
+                <p class="instructions-simple"></p>
+                <p> You may rate the pairs of words you will be shown on a meaning similarity scale, where:</p>
+                <p><b>Not at all</b> is for pairs of words that refer to completely different topics and carry completely different meanings;</p>
+                <p><b>Extremely</b> is for pairs of words that refer to two extremely similar topics and have extremely similar meanings.</p>
+                <p>Please rate <b>I do not know one of the words</b> if you are not familiar with the meaning of one of the words or both.</p>
+                <p><b>Never choose 'Do not choose this option'</b></p>
+                <h2>Examples:</h2>
+                <p>The words <b>'aircraft'</b> and <b>'plane'</b> have high similarity ('Extremely') because they are two words for the same object;</p>
+                <p>the pair <b>'aircraft'</b> and <b>'car'</b> are moderately similar ('Moderately') because they are two means of transport;</p>
+                <p>the words <b>'aircraft'</b> and <b>'hair'</b> are not similar at all ('Not at all').</p>
+                <p><b>We will check your adherence to the instructions above. If your answers are not satisfactory, we may exclude you from the study.</b></p>
+                <h2>Other examples:</h2>
+                <p><b>'Milk'</b> and <b>'cow'</b>, <b>'hour'</b> and <b>'time'</b> have high meaning similarity ('Extremely')</p>
+                <p><b>'Horse'</b> and <b>'cow'</b>, <b>'clock'</b> and <b>'time'</b> have moderate meaning similarity ('Moderately')</p>
+                <p><b>'Desk'</b> and <b>'cow'</b>, <b>'grass'</b> and <b>'time'</b> have very low meaning similarity ('Not at all')</p>
+                <!-- <h2>Guidelines:</h2>
+                <ol class="instructions-steps">
+                </ol>
+                <div id="sample-task">
+                    <h3>Sample task:</h3>
+                    <div id="instructions-demo"></div>
+                </div> -->
+                <div class="ui primary button right floated instruction-button">Continue</div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!--new--> <div class="ui top aligned centered relaxed grid">
+               <div id='last' class="ui top aligned centered relaxed grid">
+            <div class="row">
+            <div class="sixteen wide column">
+                <center>
+                <h2>Congratulations! You reached the end of the study. Here is the last question.</h2>
+                <p style="font-size:28px;"> <b>What is your gender?</b></p>
+                
+                <!-- <form action="" align="left"> --> 
+                <form action="" align="left" > 
+                
+       <input type="radio" name="gender" id="hidden1" value="" checked="1">
+          
+             <script type="text/javascript"> 
+              document.getElementById("hidden1").style.display = "none"; 
+             </script>
+      <p style="font-size:22px;">   
+      <input type="radio" name="gender" id="gender" value="f">
+      Female
+      </p>
+      <p style="font-size:22px;">
+      <input type="radio" name="gender" id="gender" value="m">
+
+      Male
+      </p>
+      <p style="font-size:22px;">
+      <input type="radio" name="gender" id="gender" value="other">
+      Other
+      </p>
+                </form>
+                </center>
+                </div>
+                   </div>
+    </div>
+  
+    <!--
+                <div class="top aligned row">
+                <div class="eight wide column"> 
+             <div class="right aligned eight wide column">
+                 <div align="right" >
+               <div id="final-task-fields" class="ui form">
+                    <div id="feedback-field" class="field">
+                        <label>
+                            You can leave an optional comment or feedback:
+                        </label>
+                        <textarea id="feedback-input" rows="2"></textarea>
+                    </div>
+                    <div class="field">
+                        <div id="submit-button" class="ui green right floated button">Submit</div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+    </div>
+    </div>
+    </div>
+    -->
+    
+    
+    
+
+  
+            
+    
+   <div class="top aligned row"> 
+    <div id="experiment" class="ui top aligned centered relaxed grid">
+        <div class="row">
+            <div class="sixteen wide column">
+                <div id="progress-bar" class="ui small olive progress">
+                    <div class="bar"></div>
+                    <div class="label"></div>
+                </div>
+            </div>
+        </div>
+        <!-- vv CUSTOM EXPERIMENT MARKUP GOES HERE vv -->
+        <div class='row'>
+        <div class='boxed'>
+            <h2 class="exp-data1">Input data for task</h2> 
+        </div>
+            <div class='boxed'>
+            <h2 class="exp-data2">Input data for task</h2> 
+            </div>
+        </div>
+
+        
+        <div class="center aligned fourteen wide column">
+                     
+         <h3>How similar are the two meanings?</h3>
+         
+     <div class='wrap'>
+     <form action="">
+    <ul class='likert'>
+      <li>
+        <input type="radio" name="Options" value="1" checked="0">
+        <label for="1">Not at all</label>
+      </li>
+      <li>
+        <input type="radio" name="Options" value="2" checked="0">
+        <label>Slightly</label>
+      </li>
+      <li>
+        <input type="radio" name="Options" value="3" checked="0">
+        <label>Moderately</label>
+      </li>
+       <li>
+        <input type="radio" name="Options" value="4" checked="0">
+        <label>Very</label>
+      </li>
+      <li>
+        <input type="radio" name="Options" value="5" checked="0">
+        <label>Extremely</label>
+        </li>
+    </ul>
+         
+          <input type="radio" name="Options" id="hidden" value="" checked="1">
+             <script type="text/javascript"> 
+              document.getElementById("hidden").style.display = "none"; 
+             </script>
+       <div class='wrap-1'> 
+            <p>
+      <input type="radio" name="Options" id="exp-input" value="6">
+                <label>Do not choose this option</label>
+      </p> 
+                                             <p>
+      <input type="radio" name="Options" id="nonloso" value="dunno">
+                <label>I do not know one of the words</label>
+      </p>
+</div>
+         </form>
+    </div>
+    </div>
+          
+        <!-- ^^ CUSTOM EXPERIMENT MARKUP GOES HERE ^^ -->
+        <div class="middle aligned row">
+            <div class="eight wide column">
+                <div id="message-field" class="field">
+                </div>
+            </div>
+            <div class="eight wide column">
+                <div id="button-row" class="field">
+                    <div id="next-button" class="ui primary right floated button">Next</div>
+                    <!-- <div id="prev-button" class="ui primary right floated button">Prev</div> -->
+                    <div class="ui button right floated instruction-button">Show instructions</div>
+                </div>
+            </div>
+        </div> 
+       </div>
+    </div>
+
+            <div class="top aligned row">
+      <div class="eight wide column"></div>
+            <div class="right aligned eight wide column">
+                <div id="final-task-fields" class="ui form">
+                    <div class="field">
+                       <!-- <div style="position:relative; left:1080px;"> -->
+                        <label>
+                            Any comments or feedback?
+                        </label>
+                            <textarea id="feedback-input" rows="2" cols="40"></textarea>
+                        <div id="submit-button" class="ui green right floated button">Submit</div>
+                           
+                      <!--  </div> -->
+                    </div>
+                </div>
+            </div>
+    </div>    
+    
+        <div class="ui divider"></div>
+        <div class="row">
+            <div id="disclaimer-box" class="center aligned fourteen wide column">
+                <p class="disclaimer"></p>
+            </div>
+        </div>
+        <div class="row">
+            <form id="submit-form" name="submit-form">
+            </form>
+        </div>
+    </div>
+    </div>
+
+
+ 
+</body>
+</html>
