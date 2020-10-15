@@ -276,7 +276,7 @@ function setupButtons() {
 
 /* MAIN */
 $(document).ready(function() {
-    $.getJSON("config.json").done(function(data) {
+    $.getJSON("config1.json").done(function(data) {
         config = data;
         if (config.meta.aggregate) {
             state.taskOutputs = {};
