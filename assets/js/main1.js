@@ -189,7 +189,7 @@ function submitHIT() {
     //console.log(submitUrl)
     //console.log(config.hitCreation.production)
     state.action.push('submit');
-    var gen=document.querySelector('input[name="genderS"]:checked').value;
+    var gen=document.querySelector('input[name="gender"]:checked').value;
     state.gender.push(gen);
     console.log(gen);
     console.log(state.gender);
