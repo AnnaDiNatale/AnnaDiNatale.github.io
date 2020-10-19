@@ -281,7 +281,7 @@ $(document).ready(function() {
         }
         custom.loadTasks(config.meta.numSubtasks).done(function(taskInputs) {
         $.getJSON("questions.json").done(function(data) { questions=data;
-            state.taskInputs = questions.thirty;
+            state.taskInputs = questions.quest41;
             populateMetadata(config);
             setupButtons(config);
         });
