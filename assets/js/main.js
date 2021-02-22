@@ -219,7 +219,6 @@ function submitHIT() {
     addHiddenField(form, 'feedback', $("#feedback-input").val());
     addHiddenField(form, 'gender', state.gender);
     //download(form,'results.txt','text/plain');
-    console.log('form ',form)
     $("#submit-form").attr("action", submitUrl); 
     $("#submit-form").attr("method", "POST"); 
     $("#submit-form").submit();
