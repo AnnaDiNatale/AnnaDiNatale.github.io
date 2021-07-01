@@ -1,0 +1,50 @@
+header {
+    color: white;
+    position: relative;
+    height: 100px;
+    background-color: #102645;
+}
+
+.instructions {
+	background-color:white;
+	margin: 25px 100px 25px;
+	font-size: 20px;
+}
+
+h1 {
+	margin: 0 0 10px;
+	font-size: 30px;
+	font-weight: bold;
+	color:#fab600;
+	text-align: center;
+	position: relative;
+	top: 30px;
+}
+
+h2{
+	font-size: 25px;
+	color: #102645;
+}
+
+form {
+	text-align: center;
+}
+
+.button {
+  background-color: #102645;
+  color: #fab600;
+  border: 2px solid #102645;
+  border-radius: 8%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 40px;
+  transition-duration: 0.5s;
+}
+
+.button:hover{
+  background-color: white;
+  color: #102645;
+}
+
