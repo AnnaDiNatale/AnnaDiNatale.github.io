@@ -336,6 +336,7 @@ function sendResults(){
 	//} else if (prod == "false"){
 	//	submitUrl = SANDBOX_SUBMIT;
 	//}
+	console.log("here");
 	console.log(prod);
 	console.log(submitUrl);
 	/*document.getElementById("assignmentId").textContent = answers.assignmentId;
