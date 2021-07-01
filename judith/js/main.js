@@ -330,12 +330,12 @@ function end(){
 
 function sendResults(){
 	
-	//var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
-	if (prod == "true"){
-		submitUrl =  MTURK_SUBMIT;
-	} else if (prod == "false"){
-		submitUrl = SANDBOX_SUBMIT;
-	}
+	var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
+	//if (prod == "true"){
+	//	submitUrl =  MTURK_SUBMIT;
+	//} else if (prod == "false"){
+	//	submitUrl = SANDBOX_SUBMIT;
+	//}
 	console.log(prod);
 	console.log(submitUrl);
 	/*document.getElementById("assignmentId").textContent = answers.assignmentId;
