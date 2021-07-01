@@ -354,7 +354,8 @@ function sendResults(){
 	} else {
 		addHiddenField(form, 'politics', 'NA');
 	}
-	
+	console.log(submitUrl);
+	console.log(form);
 	$("#submit-form").attr("action", submitUrl); 
     	$("#submit-form").attr("method", "POST"); 
     	$("#submit-form").submit();
