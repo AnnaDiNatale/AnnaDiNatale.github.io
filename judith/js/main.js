@@ -29,9 +29,9 @@ function toInstructions() {
 
 
 function loadIndex(){
-    /*$.getJSON("config.json").done(function(data) {
+    $.getJSON("config.json").done(function(data) {
 	config = data;
-    });*/
+    });
 }
 
 
@@ -330,14 +330,14 @@ function end(){
 
 function sendResults(){
 	
-	//var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
+	var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
 	console.log("here");
-	console.log(prod);
-	if (prod == "true"){
-		submitUrl =  MTURK_SUBMIT;
-	} else if (prod == "false"){
-		submitUrl = SANDBOX_SUBMIT;
-	}
+	//console.log(prod);
+	//if (prod == "true"){
+	//	submitUrl =  MTURK_SUBMIT;
+	//} else if (prod == "false"){
+	//	submitUrl = SANDBOX_SUBMIT;
+	//}
 
 	console.log(submitUrl);
 	/*document.getElementById("assignmentId").textContent = answers.assignmentId;
