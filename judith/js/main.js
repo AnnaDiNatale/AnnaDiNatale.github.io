@@ -62,7 +62,9 @@ function displayControlQuestion(){
 	
 	if (parameters != ""){
 		var prod_def = parameters[0].split("=");
+		console.log("prod_def: ",prod_def)
 		prod = unescape(prod_def[1]);
+		console.log("prod: ",prod)
 		if (parameters.length == 1){
 			var data_file = "survey_test_control_question.json";
 		} else {
@@ -139,6 +141,7 @@ function checkControlQuestion(){
 function submitFailSurvey(){
 		
 	//var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
+	
 	if (prod == "true"){
 		submitUrl =  MTURK_SUBMIT;
 	} else if (prod == "false"){
