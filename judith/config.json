@@ -1,0 +1,14 @@
+{
+    "hitCreation": {
+        "title": "Stimmung in Texten",
+        "description": "Transportiert der folgende Kommentar eher eine positive oder negative Stimmung?",
+        "numTasks": 1,
+        "numAssignments": 5,
+        "rewardAmount": "1.00",
+        "keywords": "",
+        "duration": 1200,
+        "lifetime": 3600,
+        "taskUrl": "https://judith-la.github.io/website_survey.github.io/",
+        "production": true
+    }
+}

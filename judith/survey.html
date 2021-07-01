@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<title>Annotation of comments</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type='text/javascript'  src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.9.2/jquery-ui.js" ></script>
+	<script src="js/main_local.js"></script>
+	
+	<script src="https://www.google.com/recaptcha/api.js?render=6LfnbZUaAAAAAOVG3D1gWBKpQBOdtE-1UF0yPsxU"></script>
+	<script>
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6LfnbZUaAAAAAOVG3D1gWBKpQBOdtE-1UF0yPsxU', {action:'validate_captcha'})
+		.then(function(token) {
+			document.getElementById('recaptchaResponse').value = token;
+		});
+	});
+	</script>
+	
+</head>
+
+<body onload="displayControlQuestion()">
+	
+<header>
+	<h1> Umfrage zu Stimmung in Texten </h1>
+</header>
+	
+<div class="progress-bar-back">
+	<div id="progress-bar" class="progress-bar-front"></div>
+</div>
+
+<br></br>	
+	
+<div class="body">
+
+	<h2> Transportiert der folgende Kommentar eher eine positive oder negative Stimmung? </h2>
+	
+	<div class="text">
+		<input type="hidden" id="postid">
+		<input type="hidden" id="type">
+		<p id="title"></p>
+		<p id="text"></p>
+	</div>
+	
+	<ul class='likert'>
+		<li>
+		<input type="radio" name="Options" value="-2">
+		<label for="-2" style="left: 0px">Negativ</label>
+		</li>
+		<li>
+		<input type="radio" name="Options" value="-1">
+		<label for="-1">Eher negativ</label>
+		</li>
+		<li>
+		<input type="radio" name="Options" value="0">
+		<label for="0">Neutral</label>
+		</li>
+		<li>
+		<input type="radio" name="Options" value="1">
+		<label for="1">Eher positiv</label>
+		</li>
+		<li>
+		<input type="radio" name="Options" value="2">
+		<label for="2">Positiv</label>
+		</li>
+	</ul>
+	
+	<input type="radio" id="dontUnderstand" name="dontUnderstand" value="dontUnderstand">
+	<label for="left">Ich verstehe das nicht</label></br>
+	
+	<div class="down">
+		<button class="button" id="control" onclick="checkControlQuestion()"> Nächster </button>
+		<button id="next" onclick="nextQuestion()" hidden="True"> Nächster </button>
+		<button id="finish" onclick="endSurvey()" hidden="True"> Ende </button>
+		<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+	</div>
+	
+</div>
+	
+</body>
+
+</html>

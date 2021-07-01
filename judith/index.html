@@ -1,0 +1,173 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Annotation of comments</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css"/>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+
+<body onload="loadIndex()">
+	<div id="Instructions">
+		<header>
+			<h1> Umfrage Anweisungen </h1>
+		</header>
+
+		<div class="instructions">
+			
+			<p>Liebe Teilnehmer:innen,
+			<br></br>
+			Vielen Dank, dass Sie sich dazu entschieden haben, an unserer Studie teilzunehmen. 
+			<br> Der Zweck der Studie ist es, Bewertungen über die Stimmung zu erhalten, die durch Text transportiert wird. 
+			Dazu werden wir Ihnen nacheinander 30 kurze Texte auf Deutsch zeigen. Die Texte stammen aus Beiträgen von Online-Diskussionen. 
+			<br> Bitte bewerten Sie für jeden der Texte, ob dieser eine eher positive oder negative Stimmung transportiert. 
+			Sie können eine von fünf Abstufungen auf der Skala negativ - eher negativ - neutral - eher positiv - positiv wählen. </p>
+			
+			<p> Beispiel: "Dies ist ein positiver Text." wäre zum Beispiel positiv, 
+			"Dies ist ein neutraler Text." wäre neutral und "Dies ist ein negativer Text." wäre negativ. </p>
+
+			<h2> Einwilligungserklärung </h2>
+			<p> Die Studie sollte zwischen 5 und 10 Minuten Ihrer Zeit in Anspruch nehmen. 
+			<br> Ihre Teilnahme ist freiwillig. Sie können die Umfrage jederzeit abbrechen, ohne dass Ihnen dadurch Nachteile entstehen. </p>
+
+
+			<h2> Datenschutz </h2>
+			<p> Ihre Antworten werden von Amazon Mechanical Turk gespeichert. 
+			<br> Die beteiligten Wissenschaftler:innen haben keinen Zugang zu Information, die Sie persönlich identifizieren könnte. 
+			<br> Die anonymisierten Daten werden in einer nicht auf Gewinn ausgerichteten akademischen Studie analysiert.
+			<br> Ich gebe hiermit meine Zustimmung. </p>
+		</div>
+		<div>
+		    	<button class="button" id="start" onclick="displayControlQuestion()">Verstanden</button>
+		</div>
+	</div>
+
+	<div id="survey" hidden="True">
+		<header>
+			<h1> Umfrage zu Stimmung in Texten </h1>
+		</header>
+			
+		<div class="progress-bar-back">
+			<div id="progress-bar" class="progress-bar-front"></div>
+		</div>
+
+		<br></br>	
+			
+		<div class="body">
+
+			<h2> Transportiert der folgende Kommentar eher eine positive oder negative Stimmung? </h2>
+			
+			<div class="text">
+				<input type="hidden" id="postid">
+				<input type="hidden" id="type">
+				<p id="title"></p>
+				<p id="text"></p>
+			</div>
+			
+			<ul class='likert'>
+				<li>
+				<input type="radio" name="Options" value="-2">
+				<label for="-2" style="left: 0px">Negativ</label>
+				</li>
+				<li>
+				<input type="radio" name="Options" value="-1">
+				<label for="-1">Eher negativ</label>
+				</li>
+				<li>
+				<input type="radio" name="Options" value="0">
+				<label for="0">Neutral</label>
+				</li>
+				<li>
+				<input type="radio" name="Options" value="1">
+				<label for="1">Eher positiv</label>
+				</li>
+				<li>
+				<input type="radio" name="Options" value="2">
+				<label for="2">Positiv</label>
+				</li>
+			</ul>
+			
+			<input type="radio" id="dontUnderstand" name="dontUnderstand" value="dontUnderstand">
+			<label for="left">Ich verstehe nicht</label></br>
+			
+			<div class="down">
+				<button class="button" id="control" onclick="checkControlQuestion()"> Nächster </button>
+				<button id="next" onclick="nextQuestion()" hidden="True"> Nächster </button>
+				<button id="finish" onclick="endSurvey()" hidden="True"> Ende </button>
+				<input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="endSurvey" hidden="True">
+		<header>
+			<h1> Ende der Umfrage </h1>
+		</header>
+		
+		<div id="lastQuestions">
+			</br>
+			<h2> Sie haben das Ende der Aufgabe erreicht, Gratulation! </h2>
+
+			<p> Als letzte Fragen, würden wir gerne... </br>
+				</br>
+				Ihr Gender (soziales/biologisches Geschlecht) wissen:
+				<p>
+					<input type="radio" id="female" name="gender" value="female">
+					<label for="female">Weiblich</label><br>
+					<input type="radio" id="male" name="gender" value="male">
+					<label for="male">Männlich</label><br>
+					<input type="radio" id="other" name="gender" value="other">
+					<label for="other">Anders</label>
+				</p>
+				Ihre politische Zugehörigkeit:
+				<p>
+					<input type="radio" id="left" name="politics" value="left">
+					<label for="left">Links</label><br>
+					<input type="radio" id="center" name="politics" value="center">
+					<label for="center">Mitte</label><br>
+					<input type="radio" id="right" name="politics" value="right">
+					<label for="right">Rechts</label>
+				</p>
+				Ihr Alter:
+				<p>
+					<input type="text" name="age">
+				</p>
+			</p>
+			<button id="end-button" class="button" onclick="end()">Enden</button>
+		</div>
+		
+		<div id="results" hidden="True">
+			
+			<form id="submit-form" name="submit-form">
+				
+	            	</form>
+		
+		</div>
+
+		<div class="body" id="Thanks" hidden="True">
+			<p>Vielen Dank für Ihre Teilnahme an der Umfrage </p>
+			<button id="submit-button" class="button" onclick="sendResults()">Einreichen</button>
+		</div>
+	</div>
+
+	<div id="fail" hidden="True">
+		<header>
+			<h1> Ende der Umfrage </h1>
+		</header>
+
+		<div class="instructions">
+			<p>Liebe:r Teilnehmer:innen,
+			<br></br>
+			<br> Zur Sicherung der Datenqualität beinhaltet die Erhebung einige Kontrollfragen. 
+			<br> Leider weicht Ihre Antwort zu stark von den plausiblen Lösungen ab, weshalb wir Sie nicht für die Aufgabe zulassen können. </p>
+		</div>
+	</div>
+
+</body>
+
+</html>

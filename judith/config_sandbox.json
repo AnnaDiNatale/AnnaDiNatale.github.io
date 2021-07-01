@@ -1,0 +1,14 @@
+{
+    "hitCreation": {
+        "title": "Comments ratings",
+        "description": "Is the following comment about a postive or a negetive feeling?",
+        "numTasks": 1,
+        "numAssignments": 30,
+        "rewardAmount": "1.00",
+        "keywords": "",
+        "duration": 1200,
+        "lifetime": 86400,
+        "taskUrl": "https://judith-la.github.io/website_survey.github.io/",
+        "production": false
+    }
+}
