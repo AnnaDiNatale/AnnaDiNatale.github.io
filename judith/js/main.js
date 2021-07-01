@@ -333,7 +333,8 @@ function sendResults(){
 	} else if (prod == "false"){
 		submitUrl = SANDBOX_SUBMIT;
 	}
-	
+	console.log(prod);
+	console.log(submitUrl);
 	/*document.getElementById("assignmentId").textContent = answers.assignmentId;
 	document.getElementById("workerId").textContent = answers.workerId;
 	document.getElementById("gender").textContent = document.querySelector('input[name="gender"]:checked').value;
@@ -354,7 +355,7 @@ function sendResults(){
 	} else {
 		addHiddenField(form, 'politics', 'NA');
 	}
-	console.log(submitUrl);
+	
 	console.log(form);
 	$("#submit-form").attr("action", submitUrl); 
     	$("#submit-form").attr("method", "POST"); 
