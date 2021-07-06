@@ -13,7 +13,8 @@ var answers = {id: [],
 	       type: [], 
 	       rate: [],
 	       assignmentId: gup("assignmentId"),
-	       workerId: gup("workerId")};
+	       workerId: gup("workerId"),
+};
 var startDate;
 var endDate;
 var prod;
