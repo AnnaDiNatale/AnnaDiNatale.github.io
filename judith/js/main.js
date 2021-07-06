@@ -362,6 +362,7 @@ function sendResults(){
 	}
 	
 	console.log(form);
+	console.log("We are here");
 	$("#submit-form").attr("action", submitUrl); 
     	$("#submit-form").attr("method", "POST"); 
     	$("#submit-form").submit();
