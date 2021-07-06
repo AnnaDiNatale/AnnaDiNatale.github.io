@@ -331,7 +331,6 @@ function end(){
 function sendResults(){
 	
 	var submitUrl = config.hitCreation.production ? MTURK_SUBMIT : SANDBOX_SUBMIT;
-	console.log("here");
 	//console.log(prod);
 	//if (prod == "true"){
 	//	submitUrl =  MTURK_SUBMIT;
@@ -362,7 +361,6 @@ function sendResults(){
 	}
 	
 	console.log(form);
-	console.log("We are here");
 	$("#submit-form").attr("action", submitUrl); 
     	$("#submit-form").attr("method", "POST"); 
     	$("#submit-form").submit();
