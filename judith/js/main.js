@@ -305,7 +305,7 @@ function loadRates(){
 	var hours = Math.floor((surveyTime)/3600);
 	var minutes = Math.floor((surveyTime)%3600/60);
 	var seconds = Math.floor((surveyTime)%60);
-
+	console.log(hours);
 	/*document.getElementById("survey_time").textContent = hours.toString()+':'+minutes.toString()+':'+seconds.toString();
 	document.getElementById("score").textContent = sessionStorage.getItem("score");*/
 	
@@ -321,6 +321,8 @@ function loadRates(){
 	var time = hours.toString()+':'+minutes.toString()+':'+seconds.toString();
 	addHiddenField(form, 'survey_time', time);
 	//addHiddenField(form, 'captchaScore', sessionStorage.getItem("score"));
+	console.log("form");
+	console.log(form);
 }
 
 function end(){
