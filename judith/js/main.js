@@ -300,7 +300,7 @@ function addHiddenField(form, name, value) {
 
 function loadRates(){
 	//document.getElementById("rates").textContent = sessionStorage.getItem("rates");
-	
+	console.log("loadRates");
 	var surveyTime = sessionStorage.getItem("surveyTime");
 	var hours = Math.floor((surveyTime)/3600);
 	var minutes = Math.floor((surveyTime)%3600/60);
@@ -324,6 +324,7 @@ function loadRates(){
 }
 
 function end(){
+	console.log("end");
 	document.getElementById("lastQuestions").hidden = true;
 	document.getElementById("Thanks").hidden = false;
 }
