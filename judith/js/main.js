@@ -350,7 +350,8 @@ function sendResults(){
 	
 	$("#submit-button").addClass("loading");
 	
-	var form = document.getElementById("submit-form");
+	//var form = document.getElementById("submit-form");
+	var form = $("submit-form");
 	if (document.querySelector('input[name="gender"]:checked') != null){
 		addHiddenField(form, 'gender', document.querySelector('input[name="gender"]:checked').value);
 	} else {
