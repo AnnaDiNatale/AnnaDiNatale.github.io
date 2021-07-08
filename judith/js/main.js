@@ -22,6 +22,8 @@ var submitUrl;
 
 function toSurvey() {
  	location.replace("survey.html");
+	console.log("assignmentId");
+	console.log(gup("assignmentId"));
 }
 
 function toInstructions() {
