@@ -27,8 +27,7 @@ var custom = {
          * 
          * returns: None
          */
-        $(".exp-data1").text((taskInput.toString()).split(" ")[0]);
-        $(".exp-data2").text((taskInput.toString()).split(" ")[1]);
+        $(".exp-data1").text((taskInput.toString()));
         document.getElementById("hidden").checked = true;
         //$("#exp-input").val(taskOutput);
     },
