@@ -20,11 +20,11 @@
         "description": "Which emotions was the author feeling while writing this text?",
         "numTasks": 1,
         "numAssignments": 4,
-        "rewardAmount": "3.00",
+        "rewardAmount": "0.50",
         "keywords": "texts, emotions, labelling",
         "duration": 1200,
         "lifetime": 86401,
         "taskUrl": "https://annadinatale.github.io/leia/survey.html",
-        "production": false
+        "production": true
     }
 }
