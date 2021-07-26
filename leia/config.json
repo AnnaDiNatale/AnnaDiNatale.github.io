@@ -2,7 +2,7 @@
     "meta": {
         "title": "Expression of emotions",
         "description": "Which emotions was the author feeling while writing this text?",
-        "numSubtasks": 33,
+        "numSubtasks": 32,
         "disclaimer": "You are participating in this experiment voluntarily and you can leave at any time.",
         "aggregate": false
     },
