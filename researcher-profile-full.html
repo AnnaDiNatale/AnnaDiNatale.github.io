@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Personal academic webpage for Anna Di Natale." />
+  <meta property="og:title" content="Anna Di Natale" />
+  <meta property="og:description" content="Researcher in computational linguistics and language analysis." />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Anna Di Natale</title>
+  <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=zodiak@400,500,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.45rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.15rem);
+      --text-2xl: clamp(2.2rem, 1.5rem + 3vw, 4.4rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
+      --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+      --color-bg: #ffffff;
+      --color-surface: #ffffff;
+      --color-surface-soft: #ffffff;
+      --color-border: #e7dfe1;
+      --color-border-strong: #d9c8cd;
+      --color-text: #1f1719;
+      --color-text-muted: #5d4f54;
+      --color-text-faint: #8a7a7f;
+      --color-text-inverse: #fffafb;
+      --color-primary: #cf0a3b;
+      --color-primary-dark: #a3082f;
+      --color-primary-soft: #fce9ef;
+      --shadow-sm: 0 8px 24px rgba(86, 23, 41, 0.05);
+      --radius-md: 0.5rem; --radius-lg: 0.9rem; --radius-xl: 1.2rem; --radius-full: 9999px;
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --content-default: 1080px;
+      --font-body: 'General Sans', 'Inter', sans-serif;
+      --font-display: 'Zodiak', Georgia, serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.75;
+      color: var(--color-text);
+      background: var(--color-bg);
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: 0.3rem; }
+    .skip-link { position: absolute; left: 1rem; top: -3rem; background: var(--color-primary); color: var(--color-text-inverse); padding: .75rem 1rem; border-radius: var(--radius-md); z-index: 100; }
+    .skip-link:focus { top: 1rem; }
+    .container { width: min(calc(100% - 2rem), var(--content-default)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.75rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: .85rem; font-size: var(--text-sm); font-weight: 600; letter-spacing: .02em;
+    }
+    .brand-mark {
+      width: 2.35rem; height: 2.35rem; border-radius: .75rem; display: grid; place-items: center;
+      color: var(--color-primary); background: var(--color-primary-soft); border: 1px solid var(--color-border);
+    }
+    .nav-links { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
+    .nav-links a {
+      font-size: var(--text-sm); color: var(--color-text-muted); position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; left: 0; bottom: -0.25rem; width: 100%; height: 1px;
+      background: var(--color-primary); transform: scaleX(0); transform-origin: left; transition: transform var(--transition);
+    }
+    .nav-links a:hover { color: var(--color-text); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    main section { padding-block: clamp(3.75rem, 8vw, 6.5rem); }
+    .hero { padding-top: clamp(4rem, 10vw, 7rem); }
+    .hero-grid, .split, .contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2.5rem; align-items: start; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem; width: fit-content;
+      padding: .45rem .85rem; border-radius: var(--radius-full);
+      background: #fff4f7; color: var(--color-primary);
+      font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 1.35rem;
+    }
+    h1, h2 {
+      font-family: var(--font-display); font-weight: 500; letter-spacing: -0.035em;
+    }
+    h1 {
+      font-size: clamp(3.1rem, 1.8rem + 5vw, 5.3rem); line-height: .96; margin-bottom: 1rem; max-width: 9ch;
+    }
+    .hero-intro { max-width: 60ch; color: var(--color-text-muted); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.7rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; padding: .82rem 1.15rem;
+      border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600;
+      transition: transform var(--transition), background var(--transition), color var(--transition), box-shadow var(--transition);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--color-primary); color: var(--color-text-inverse); }
+    .btn-primary:hover { background: var(--color-primary-dark); }
+    .btn-secondary { background: #ffffff; color: var(--color-text); border: 1px solid var(--color-border-strong); }
+
+    .hero-card, .profile-card, .panel, .pub-item, .contact-card {
+      background: var(--color-surface); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);
+    }
+    .photo-slot { display: grid; gap: 1rem; }
+    .photo-frame {
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      background: linear-gradient(180deg, #faf6f7, #f2eaec);
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+    .photo-frame::before {
+      content: "Add your portrait here";
+      position: absolute;
+      inset: auto 1rem 1rem 1rem;
+      text-align: center;
+      font-size: var(--text-sm);
+      color: var(--color-text-faint);
+      letter-spacing: .02em;
+    }
+    .photo-placeholder {
+      width: 42%;
+      color: var(--color-primary);
+      opacity: 0.9;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-xl); padding: 2rem; position: relative;
+    }
+    .hero-card::before {
+      content: ''; position: absolute; inset: 1rem; border: 1px solid var(--color-border); border-radius: calc(var(--radius-xl) - .25rem); pointer-events: none;
+    }
+    .hero-card-content { position: relative; z-index: 1; display: grid; gap: 1rem; }
+    .hero-card .label {
+      font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary); font-weight: 700;
+    }
+    .hero-card p { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .section-head { display: grid; gap: .75rem; margin-bottom: 2rem; max-width: 45rem; }
+    .section-head h2 { font-size: var(--text-xl); line-height: 1.05; }
+    .section-head p { color: var(--color-text-muted); }
+    .kicker { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .1em; color: var(--color-primary); font-weight: 700; }
+
+    .profile-card {
+      border-radius: var(--radius-xl); padding: 1.75rem; display: grid; gap: 1.4rem;
+    }
+    .avatar {
+      width: 4.8rem; height: 4.8rem; border-radius: 1rem; display: grid; place-items: center;
+      color: var(--color-primary); background: var(--color-primary-soft); border: 1px solid var(--color-border);
+    }
+    .profile-meta h3 { font-size: var(--text-lg); line-height: 1.2; margin-bottom: .5rem; }
+    .profile-meta p { color: var(--color-text-muted); font-size: var(--text-sm); }
+    .meta-list { display: grid; gap: .8rem; }
+    .meta-list div {
+      display: flex; justify-content: space-between; gap: 1rem; padding-top: .7rem; border-top: 1px solid var(--color-border); font-size: var(--text-sm);
+    }
+    .meta-list dt { color: var(--color-text-faint); }
+    .meta-list dd { color: var(--color-text); text-align: right; }
+
+    .research-grid, .publication-list { display: grid; gap: 1rem; }
+    .research-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+    .publication-list { grid-template-columns: 1.15fr .85fr; }
+    .panel, .pub-item, .contact-card { border-radius: var(--radius-lg); padding: 1.5rem; height: 100%; }
+    .panel { display: flex; flex-direction: column; }
+    .panel h3, .pub-item h3, .contact-card h3 { font-size: var(--text-lg); line-height: 1.2; margin: .75rem 0; }
+    .panel p, .pub-item p, .contact-card p { color: var(--color-text-muted); font-size: var(--text-sm); }
+    .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+    .tag {
+      padding: .42rem .68rem; border-radius: var(--radius-full); background: var(--color-primary-soft); color: var(--color-text-muted); font-size: var(--text-xs); border: 1px solid var(--color-border);
+    }
+    .featured { border-top: 2px solid var(--color-primary); }
+    .contact-card a, .pub-item a { color: var(--color-primary); }
+    .contact-card a:hover, .pub-item a:hover { color: var(--color-primary-dark); }
+    footer {
+      padding: 2rem 0 3rem; color: var(--color-text-faint); font-size: var(--text-sm); border-top: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid, .split, .research-grid, .publication-list, .contact-grid { grid-template-columns: 1fr; }
+      .nav { align-items: flex-start; padding: 1rem 0; }
+    }
+    @media (max-width: 720px) {
+      .nav { flex-direction: column; }
+      .nav-links { width: 100%; justify-content: space-between; }
+      .hero-card, .profile-card, .panel, .pub-item, .contact-card { padding: 1.25rem; }
+      .btn { width: 100%; }
+      .hero-actions { flex-direction: column; }
+      h1 { max-width: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Anna Di Natale homepage">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 24V8h10c4 0 6 2.1 6 5.3 0 2.7-1.8 4.3-4.1 4.9L24 24" /><path d="M8 17h11" /></svg>
+        </span>
+        <span>Anna Di Natale</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Computational linguistics · Language analysis</span>
+          <h1>Anna Di Natale</h1>
+          <p class="hero-intro">PhD in Computer Science from Graz University of Technology, with a background in mathematics from the University of Bologna and current work at the Chair of Multilingual Computational Linguistics at the University of Passau.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#publications">Publications</a>
+            <a class="btn btn-secondary" href="mailto:anna.dinatale@uni-passau.de">Contact</a>
+          </div>
+        </div>
+        <aside class="photo-slot" aria-label="Portrait and current position">
+          <div class="photo-frame">
+            <svg class="photo-placeholder" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="32" cy="22" r="10"></circle>
+              <path d="M14 54c4-11 13-17 18-17s14 6 18 17"></path>
+            </svg>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-content">
+              <span class="label">Current position</span>
+              <h2>University of Passau</h2>
+              <p>Chair of Multilingual Computational Linguistics.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container split">
+        <div>
+          <div class="section-head">
+            <p class="kicker">About</p>
+            <h2>Academic background</h2>
+            <p>This version keeps the introduction compact, factual, and scholarly.</p>
+          </div>
+        </div>
+        <aside class="profile-card" aria-label="Researcher details">
+          <div class="avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2"><circle cx="32" cy="20" r="10"></circle><path d="M14 52c3-10 13-16 18-16s15 6 18 16"></path></svg>
+          </div>
+          <div class="profile-meta">
+            <h3>Profile</h3>
+            <p>Previous affiliation at IIASA in Laxenburg; PhD supervised by Prof. David Garcia.</p>
+          </div>
+          <dl class="meta-list">
+            <div><dt>PhD</dt><dd>Computer Science, TU Graz.</dd></div>
+            <div><dt>Background</dt><dd>Mathematics, University of Bologna.</dd></div>
+            <div><dt>Current role</dt><dd>University of Passau.</dd></div>
+            <div><dt>Focus</dt><dd>Language analysis.</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Research</p>
+          <h2>Main areas</h2>
+          <p>Language analysis, multilingual computational linguistics, and work related to meaning across languages.</p>
+        </div>
+        <div class="research-grid">
+          <article class="panel">
+            <p class="kicker">Area 01</p>
+            <h3>Computational linguistics</h3>
+            <p>Work situated within computational and multilingual linguistics.</p>
+            <div class="tags"><span class="tag">Multilinguality</span><span class="tag">Computational methods</span></div>
+          </article>
+          <article class="panel">
+            <p class="kicker">Area 02</p>
+            <h3>Text and language analysis</h3>
+            <p>Language analysis as a central thread across the academic trajectory.</p>
+            <div class="tags"><span class="tag">NLP</span><span class="tag">Text analysis</span></div>
+          </article>
+          <article class="panel">
+            <p class="kicker">Area 03</p>
+            <h3>Cross-linguistic meaning</h3>
+            <p>Semantic structure and colexification with applications to NLP.</p>
+            <div class="tags"><span class="tag">Colexification</span><span class="tag">Semantics</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="container">
+        <div class="section-head">
+          <p class="kicker">Publications</p>
+          <h2>Selected work</h2>
+          <p>This section can feature selected publications or link to a full publication list.</p>
+        </div>
+        <div class="publication-list">
+          <article class="pub-item featured">
+            <p class="kicker">Thesis</p>
+            <h3>Network Theory of Cross-Linguistic Colexification: Understanding Meaning and Applications to NLP</h3>
+            <p>A featured academic anchor on the homepage.</p>
+          </article>
+          <article class="pub-item">
+            <p class="kicker">Next step</p>
+            <h3>Publication links</h3>
+            <p>Replace this card with selected papers or link out to a complete publication list, Google Scholar profile, or institutional page.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-head">
+            <p class="kicker">Contact</p>
+            <h2>Professional details</h2>
+            <p>University of Passau, Chair of Multilingual Computational Linguistics, and direct contact by email.</p>
+          </div>
+        </div>
+        <aside class="contact-card">
+          <h3>Contact</h3>
+          <p>University of Passau</p>
+          <p>Chair of Multilingual Computational Linguistics.</p>
+          <p>Email: <a href="mailto:anna.dinatale@uni-passau.de">anna.dinatale@uni-passau.de</a></p>
+          <p><a class="btn btn-primary" href="mailto:anna.dinatale@uni-passau.de">Get in touch</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Classic scholarly restyling with a white background, photo slot, equal-height research cards, and accent color #cf0a3b.</div>
+  </footer>
+</body>
+</html>
